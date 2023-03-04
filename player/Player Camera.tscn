@@ -2,5 +2,5 @@
 
 [ext_resource path="res://player/Player Camera.gd" type="Script" id=1]
 
-[node name="Player Camera" type="Camera"]
+[node name="Player Camera3D" type="Camera3D"]
 script = ExtResource( 1 )

@@ -1,87 +1,60 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=11 format=3 uid="uid://m3e75ufaehbr"]
 
-[ext_resource path="res://player/Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Levels/Test Level/Test Level.glb" type="PackedScene" id=2]
-[ext_resource path="res://player/Player Camera.tscn" type="PackedScene" id=3]
-[ext_resource path="res://assets/items/medkit/medkit.tscn" type="PackedScene" id=4]
-[ext_resource path="res://assets/hud/HUD.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Levels/Test Level/Material.material" type="Material" id=7]
-[ext_resource path="res://entities/Zombie.tscn" type="PackedScene" id=8]
+[ext_resource type="PackedScene" uid="uid://bos88ehvkb4s3" path="res://player/Player.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://bsfgllf5eh3v6" path="res://Levels/Test Level/Test Level.glb" id="2"]
+[ext_resource type="PackedScene" path="res://player/Player Camera.tscn" id="3"]
+[ext_resource type="PackedScene" path="res://assets/items/medkit/medkit.tscn" id="4"]
+[ext_resource type="PackedScene" path="res://assets/hud/HUD.tscn" id="6"]
+[ext_resource type="PackedScene" uid="uid://bqwm23i4oir6q" path="res://entities/Zombie.tscn" id="8"]
 
-[sub_resource type="ArrayMesh" id=1]
-resource_name = "Test Level_Cube"
-surfaces/0 = {
-"aabb": AABB( -1, -1, -1, 2.00001, 2.00001, 2 ),
-"array_data": PoolByteArray( 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 191, 127, 127, 0, 127, 0, 57, 0, 56, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 191, 0, 127, 129, 63, 0, 57, 0, 56, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 191, 127, 0, 0, 127, 0, 57, 0, 56, 0, 0, 128, 63, 0, 0, 128, 191, 0, 0, 128, 191, 0, 129, 127, 63, 0, 54, 0, 56, 0, 0, 128, 63, 0, 0, 128, 191, 0, 0, 128, 191, 127, 127, 0, 127, 0, 54, 0, 56, 0, 0, 128, 63, 0, 0, 128, 191, 0, 0, 128, 191, 127, 0, 0, 127, 0, 54, 0, 56, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 0, 127, 0, 57, 0, 52, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 0, 127, 129, 63, 0, 57, 0, 52, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 127, 0, 0, 127, 0, 57, 0, 52, 0, 0, 128, 63, 0, 0, 128, 191, 0, 0, 128, 63, 0, 129, 127, 63, 0, 54, 0, 52, 0, 0, 128, 63, 0, 0, 128, 191, 0, 0, 128, 63, 0, 0, 0, 127, 0, 54, 0, 52, 0, 0, 128, 63, 0, 0, 128, 191, 0, 0, 128, 63, 127, 0, 0, 127, 0, 54, 0, 52, 0, 0, 128, 191, 0, 0, 128, 63, 0, 0, 128, 191, 129, 0, 0, 127, 0, 57, 0, 58, 0, 0, 128, 191, 0, 0, 128, 63, 0, 0, 128, 191, 127, 127, 0, 127, 0, 57, 0, 58, 0, 0, 128, 191, 0, 0, 128, 63, 0, 0, 128, 191, 0, 127, 129, 63, 0, 59, 0, 56, 0, 0, 128, 191, 0, 0, 128, 191, 0, 0, 128, 191, 0, 129, 127, 63, 0, 48, 0, 56, 0, 0, 128, 191, 0, 0, 128, 191, 0, 0, 128, 191, 129, 0, 0, 127, 0, 54, 0, 58, 0, 0, 128, 191, 0, 0, 128, 191, 0, 0, 128, 191, 127, 127, 0, 127, 0, 54, 0, 58, 0, 0, 128, 191, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 0, 127, 0, 57, 0, 0, 0, 0, 128, 191, 0, 0, 128, 63, 0, 0, 128, 63, 129, 0, 0, 127, 0, 57, 0, 60, 0, 0, 128, 191, 0, 0, 128, 63, 0, 0, 128, 63, 0, 127, 129, 63, 0, 59, 0, 52, 0, 0, 128, 191, 0, 0, 128, 191, 0, 0, 128, 63, 0, 129, 127, 63, 0, 48, 0, 52, 0, 0, 128, 191, 0, 0, 128, 191, 0, 0, 128, 63, 0, 0, 0, 127, 0, 54, 0, 0, 0, 0, 128, 191, 0, 0, 128, 191, 0, 0, 128, 63, 129, 0, 0, 127, 0, 54, 0, 60 ),
-"array_index_data": PoolByteArray( 1, 0, 20, 0, 14, 0, 1, 0, 7, 0, 20, 0, 10, 0, 18, 0, 6, 0, 10, 0, 22, 0, 18, 0, 23, 0, 12, 0, 19, 0, 23, 0, 16, 0, 12, 0, 15, 0, 9, 0, 3, 0, 15, 0, 21, 0, 9, 0, 5, 0, 8, 0, 2, 0, 5, 0, 11, 0, 8, 0, 17, 0, 0, 0, 13, 0, 17, 0, 4, 0, 0, 0 ),
-"blend_shape_data": [  ],
-"format": 2194711,
-"index_count": 36,
-"material": ExtResource( 7 ),
-"primitive": 4,
-"skeleton_aabb": [  ],
-"vertex_count": 24
-}
+[sub_resource type="Environment" id="Environment_anp5t"]
+background_mode = 1
 
-[sub_resource type="BoxShape" id=7]
+[sub_resource type="BoxShape3D" id="7"]
+size = Vector3(100, 1, 100)
 
-[sub_resource type="PhysicsMaterial" id=3]
+[sub_resource type="PhysicsMaterial" id="3"]
 
-[sub_resource type="ArrayMesh" id=5]
-surfaces/0 = {
-"aabb": AABB( -1, -1, -1, 2, 2, 2.00001 ),
-"array_data": PoolByteArray( 0, 0, 128, 191, 0, 0, 128, 191, 0, 0, 128, 63, 0, 129, 127, 63, 0, 48, 0, 52, 0, 0, 128, 191, 0, 0, 128, 191, 0, 0, 128, 63, 0, 0, 0, 127, 0, 54, 0, 0, 0, 0, 128, 191, 0, 0, 128, 191, 0, 0, 128, 63, 129, 0, 0, 127, 0, 54, 0, 60, 0, 0, 128, 191, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 0, 127, 0, 57, 0, 0, 0, 0, 128, 191, 0, 0, 128, 63, 0, 0, 128, 63, 129, 0, 0, 127, 0, 57, 0, 60, 0, 0, 128, 191, 0, 0, 128, 63, 0, 0, 128, 63, 0, 127, 129, 63, 0, 59, 0, 52, 0, 0, 128, 191, 0, 0, 128, 191, 0, 0, 128, 191, 0, 129, 127, 63, 0, 48, 0, 56, 0, 0, 128, 191, 0, 0, 128, 191, 0, 0, 128, 191, 129, 0, 0, 127, 0, 54, 0, 58, 0, 0, 128, 191, 0, 0, 128, 191, 0, 0, 128, 191, 127, 127, 0, 127, 0, 54, 0, 58, 0, 0, 128, 191, 0, 0, 128, 63, 0, 0, 128, 191, 129, 0, 0, 127, 0, 57, 0, 58, 0, 0, 128, 191, 0, 0, 128, 63, 0, 0, 128, 191, 127, 127, 0, 127, 0, 57, 0, 58, 0, 0, 128, 191, 0, 0, 128, 63, 0, 0, 128, 191, 0, 127, 129, 63, 0, 59, 0, 56, 0, 0, 128, 63, 0, 0, 128, 191, 0, 0, 128, 63, 0, 129, 127, 63, 0, 54, 0, 52, 0, 0, 128, 63, 0, 0, 128, 191, 0, 0, 128, 63, 0, 0, 0, 127, 0, 54, 0, 52, 0, 0, 128, 63, 0, 0, 128, 191, 0, 0, 128, 63, 127, 0, 0, 127, 0, 54, 0, 52, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 0, 127, 0, 57, 0, 52, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 0, 127, 129, 63, 0, 57, 0, 52, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 127, 0, 0, 127, 0, 57, 0, 52, 0, 0, 128, 63, 0, 0, 128, 191, 0, 0, 128, 191, 0, 129, 127, 63, 0, 54, 0, 56, 0, 0, 128, 63, 0, 0, 128, 191, 0, 0, 128, 191, 127, 127, 0, 127, 0, 54, 0, 56, 0, 0, 128, 63, 0, 0, 128, 191, 0, 0, 128, 191, 127, 0, 0, 127, 0, 54, 0, 56, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 191, 127, 127, 0, 127, 0, 57, 0, 56, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 191, 0, 127, 129, 63, 0, 57, 0, 56, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 191, 127, 0, 0, 127, 0, 57, 0, 56 ),
-"array_index_data": PoolByteArray( 2, 0, 9, 0, 4, 0, 2, 0, 7, 0, 9, 0, 8, 0, 21, 0, 10, 0, 8, 0, 19, 0, 21, 0, 20, 0, 17, 0, 23, 0, 20, 0, 14, 0, 17, 0, 13, 0, 3, 0, 15, 0, 13, 0, 1, 0, 3, 0, 6, 0, 12, 0, 18, 0, 6, 0, 0, 0, 12, 0, 22, 0, 5, 0, 11, 0, 22, 0, 16, 0, 5, 0 ),
-"blend_shape_data": [  ],
-"format": 2194711,
-"index_count": 36,
-"primitive": 4,
-"skeleton_aabb": [  ],
-"vertex_count": 24
-}
+[sub_resource type="BoxShape3D" id="4"]
 
-[sub_resource type="SpatialMaterial" id=6]
-flags_transparent = true
-albedo_color = Color( 0.54902, 0.356863, 0.356863, 1 )
+[node name="Test Level" instance=ExtResource("2")]
 
-[sub_resource type="BoxShape" id=4]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." index="0"]
+environment = SubResource("Environment_anp5t")
 
-[node name="Test Level" instance=ExtResource( 2 )]
+[node name="Player" parent="." index="1" instance=ExtResource("1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.565918, 2.6784, 0)
 
-[node name="StaticBody2" type="StaticBody" parent="." index="0"]
-transform = Transform( 50, 0, 0, 0, 1, 0, 0, 0, 50, 0, 0, 0 )
+[node name="HUD" parent="." index="4" instance=ExtResource("6")]
+layout_mode = 3
+anchors_preset = 0
 
-[node name="Floor" type="MeshInstance" parent="StaticBody2" index="0"]
-mesh = SubResource( 1 )
-skeleton = NodePath("../..")
+[node name="Zombie" parent="." index="5" instance=ExtResource("8")]
+transform = Transform3D(1, 0, 0, 0, 0.999982, 0.00595154, 0, -0.00595154, 0.999982, -4.92399, 2.0005, 0)
 
-[node name="CollisionShape" type="CollisionShape" parent="StaticBody2" index="1"]
-shape = SubResource( 7 )
-
-[node name="StaticBody" type="StaticBody" parent="." index="1"]
-transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 1, 0, 6, -10 )
-physics_material_override = SubResource( 3 )
-
-[node name="Wall" type="MeshInstance" parent="StaticBody" index="0"]
-mesh = SubResource( 5 )
-skeleton = NodePath("../..")
-material/0 = SubResource( 6 )
-
-[node name="CollisionShape" type="CollisionShape" parent="StaticBody" index="1"]
-shape = SubResource( 4 )
-
-[node name="Player" parent="." index="2" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.565918, 2.73465, 0 )
-
-[node name="HUD" parent="." index="5" instance=ExtResource( 6 )]
-
-[node name="Zombie" parent="." index="6" instance=ExtResource( 8 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.6025, 2.7583, 0 )
-
-[node name="Player Camera" parent="." index="7" instance=ExtResource( 3 )]
-fov = 15.0
-inner_cam_thresh = 4
+[node name="Player Camera3D" parent="." index="6" instance=ExtResource("3")]
+fov = 25.0
+inner_cam_thresh = 2
 y_offset = -3
 
-[node name="medkit" parent="." index="8" instance=ExtResource( 4 )]
-transform = Transform( 0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.83834, 2.16294, -4.03786 )
+[node name="medkit" parent="." index="7" instance=ExtResource("4")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.83834, 2.16294, -4.03786)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." index="8"]
+transform = Transform3D(1, 0, 0, 0, 0.82094, 0.571015, 0, -0.571015, 0.82094, 0, 3.84363, 15.6697)
+sky_mode = 1
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="." index="9"]
+
+[node name="StaticBody2" type="StaticBody3D" parent="NavigationRegion3D" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/StaticBody2" index="0"]
+transform = Transform3D(1, 0, 0, 0, 0.999969, -0.0078539, 0, 0.0078539, 0.999969, 0, 0, 0)
+shape = SubResource("7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, -10)
+physics_material_override = SubResource("3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/StaticBody3D" index="0"]
+shape = SubResource("4")

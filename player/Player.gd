@@ -1,21 +1,19 @@
-extends KinematicBody
+extends CharacterBody3D
 
 class_name Player
 
 # Declare member variables here. Examples:
-export var speed = 14.0 # max speed
-export var jump_impuslse = 20.0
-export var gravity = 75.0
-export var accel = 1.5
-
-export var cam_pos = 0
+@export var speed = 14.0 # max speed
+@export var jump_impuslse = 20.0
+@export var gravity = 75.0
+@export var accel = 1.5
 
 var player_x = 0
 var player_z = 0
 
-var velocity = Vector3.ZERO
+# var velocity = Vector3.ZERO
 
-export var max_health = 100
+@export var max_health = 100
 var health = max_health
 
 # player dependent instances
@@ -24,11 +22,11 @@ var cursor
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	camera = get_parent().get_node("Player Camera")
+	camera = get_parent().get_node("Player Camera3D")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	# print(self.translation)
+	# print(self.position)
 	
 	var direction = Vector3.ZERO
 	
@@ -50,7 +48,9 @@ func _process(delta):
 	velocity.z = move_toward(velocity.z, speed * direction.z, accel)
 	velocity.y = gravity * -1
 	
-	velocity = move_and_slide(velocity, Vector3.UP)
+	set_velocity(velocity)
+	set_up_direction(Vector3.UP)
+	move_and_slide()
 	
 	look_towards_cursor()
 
@@ -58,19 +58,24 @@ func look_towards_cursor():
 	var ray_origin = Vector3.ZERO
 	var ray_end = Vector3.ZERO
 	
-	var space_state = get_world().direct_space_state
+	var space_state = get_world_3d().get_direct_space_state()
+	var params = PhysicsRayQueryParameters3D.new()
 	
 	# gets mouse position in viewport
 	var mouse_position = get_viewport().get_mouse_position()
 	
-	ray_origin = camera.project_ray_origin(mouse_position)
-	ray_end = ray_origin + camera.project_ray_normal(mouse_position) * 2000
+	params.from = camera.project_ray_origin(mouse_position)
+	params.to = ray_origin + camera.project_ray_normal(mouse_position) * 2000
+	params.exclude = [self]
+	var result = space_state.intersect_ray(params)
 	
-	var result = space_state.intersect_ray(ray_origin, ray_end, [self])
+	# ray_origin = camera.project_ray_origin(mouse_position)
+	# ray_end = ray_origin + camera.project_ray_normal(mouse_position) * 2000
+	#var result = space_state.intersect_ray(ray_origin, ray_end, [self])
 	
-	if not result.empty():
+	if not result.is_empty():
 		var pos = result.position
-		pos = Vector3(pos.x, self.translation.y, pos.z)
+		pos = Vector3(pos.x, self.position.y, pos.z)
 		look_at(pos, Vector3.UP)
 		
 		var collider = result["collider"]

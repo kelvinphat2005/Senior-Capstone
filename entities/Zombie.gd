@@ -1,17 +1,22 @@
 extends Enemy
 
-export var attack_interval = 2
+@export var attack_interval = 2
 var attack_ready = true
 
-var attacked_time = OS.get_unix_time() - 10
+var attacked_time = Time.get_unix_time_from_system() - 10
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	attack_damage = 3
+	player = $"../Player"
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if can_see_player:
+	print(velocity)
+	set_up_direction(Vector3.UP)
+	move_and_slide()
+	
+	if see_player():
 		move_toward_player()
 		
 	else:
@@ -23,8 +28,8 @@ func _process(delta):
 		if distance_from_player() < attack_range:	
 			damage_player(attack_damage)
 			attack_ready = false
-			attacked_time = OS.get_unix_time()
+			attacked_time = Time.get_unix_time_from_system()
 	
-	if OS.get_unix_time() - attacked_time >= attack_interval:
+	if Time.get_unix_time_from_system() - attacked_time >= attack_interval:
 		attack_ready = true
 

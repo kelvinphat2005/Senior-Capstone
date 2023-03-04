@@ -4,9 +4,9 @@ class_name Inventory
 
 # Declare member variables here
 var inventory = []
-export var max_inv_slots = 10
+@export var max_inv_slots = 10
 
-onready var player = get_parent()
+@onready var player = get_parent()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
