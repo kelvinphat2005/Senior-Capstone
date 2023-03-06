@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dik17kxcmsrb5"
-path="res://.godot/imported/medkit.glb-e022abd58998c5fb4abe125a75a346f5.scn"
+uid="uid://buyvn3cklsidb"
+path="res://.godot/imported/bandage.glb-3e41739d06434768bd36a401dfeec7b8.scn"
 
 [deps]
 
-source_file="res://assets/items/Medkit/medkit.glb"
-dest_files=["res://.godot/imported/medkit.glb-e022abd58998c5fb4abe125a75a346f5.scn"]
+source_file="res://assets/items/Bandage/bandage.glb"
+dest_files=["res://.godot/imported/bandage.glb-3e41739d06434768bd36a401dfeec7b8.scn"]
 
 [params]
 
@@ -20,13 +20,13 @@ nodes/root_scale=1.0
 meshes/ensure_tangents=true
 meshes/generate_lods=true
 meshes/create_shadow_meshes=true
-meshes/light_baking=0
-meshes/lightmap_texel_size=0.1
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
 skins/use_named_skins=true
-animation/import=true
-animation/fps=15
+animation/import=false
+animation/fps=30
 animation/trimming=false
-animation/remove_immutable_tracks=true
+animation/remove_immutable_tracks=false
 import_script/path=""
 _subresources={}
 gltf/embedded_image_handling=1

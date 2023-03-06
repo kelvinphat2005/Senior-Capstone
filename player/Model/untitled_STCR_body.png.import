@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dqrlyf7hwyjpx"
-path.s3tc="res://.godot/imported/medkit_Material Base Color.png-804d646398b3fb7836e3dfcd203b5706.s3tc.ctex"
+uid="uid://3quptnhwmbt0"
+path.s3tc="res://.godot/imported/untitled_STCR_body.png-bfbd46cd6841b02f0a3d99f83126349d.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ generator_parameters={}
 
 [deps]
 
-source_file="res://assets/items/Medkit/medkit_Material Base Color.png"
-dest_files=["res://.godot/imported/medkit_Material Base Color.png-804d646398b3fb7836e3dfcd203b5706.s3tc.ctex"]
+source_file="res://Player/Model/untitled_STCR_body.png"
+dest_files=["res://.godot/imported/untitled_STCR_body.png-bfbd46cd6841b02f0a3d99f83126349d.s3tc.ctex"]
 
 [params]
 

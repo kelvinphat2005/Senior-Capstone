@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dqrlyf7hwyjpx"
-path.s3tc="res://.godot/imported/medkit_Material Base Color.png-804d646398b3fb7836e3dfcd203b5706.s3tc.ctex"
+uid="uid://qqpncpsea2wu"
+path.s3tc="res://.godot/imported/bandage_Cardboard Base Color.png-fffe675e9fa55c012cb4d497689e169f.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ generator_parameters={}
 
 [deps]
 
-source_file="res://assets/items/Medkit/medkit_Material Base Color.png"
-dest_files=["res://.godot/imported/medkit_Material Base Color.png-804d646398b3fb7836e3dfcd203b5706.s3tc.ctex"]
+source_file="res://assets/items/Bandage/bandage_Cardboard Base Color.png"
+dest_files=["res://.godot/imported/bandage_Cardboard Base Color.png-fffe675e9fa55c012cb4d497689e169f.s3tc.ctex"]
 
 [params]
 

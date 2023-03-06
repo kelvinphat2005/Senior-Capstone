@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://bw5lc526k7kji"]
+
+[node name="player model"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="1"]

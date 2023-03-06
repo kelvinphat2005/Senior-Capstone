@@ -1,6 +1,6 @@
-[gd_resource type="FontFile" load_steps=2 format=2]
+[gd_resource type="FontFile" load_steps=2 format=3]
 
-[ext_resource path="res://assets/fonts/Poco.ttf" type="FontFile" id=1]
+[ext_resource type="FontFile" uid="uid://b81gme415p68a" path="res://assets/Fonts/Poco.ttf" id="1"]
 
 [resource]
 size = 20

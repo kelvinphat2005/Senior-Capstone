@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c0syt5xct8syx"
-path.s3tc="res://.godot/imported/untitled_STCR_armor_plate.png-7fab15f0b3b3ac4bb40016b6ef100fae.s3tc.ctex"
+uid="uid://4ap72sf00mji"
+path.s3tc="res://.godot/imported/bandage_Bandage Base Color.png-e23db955b81163136e5da196efa59278.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ generator_parameters={}
 
 [deps]
 
-source_file="res://assets/untitled_STCR_armor_plate.png"
-dest_files=["res://.godot/imported/untitled_STCR_armor_plate.png-7fab15f0b3b3ac4bb40016b6ef100fae.s3tc.ctex"]
+source_file="res://assets/items/Bandage/bandage_Bandage Base Color.png"
+dest_files=["res://.godot/imported/bandage_Bandage Base Color.png-e23db955b81163136e5da196efa59278.s3tc.ctex"]
 
 [params]
 

@@ -1,10 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://m3e75ufaehbr"]
+[gd_scene load_steps=11 format=3]
 
-[ext_resource type="PackedScene" uid="uid://bos88ehvkb4s3" path="res://player/Player.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://d4jfihvrcwdo" path="res://Player/Player.tscn" id="1"]
 [ext_resource type="PackedScene" uid="uid://bsfgllf5eh3v6" path="res://Levels/Test Level/Test Level.glb" id="2"]
-[ext_resource type="PackedScene" path="res://player/Player Camera.tscn" id="3"]
-[ext_resource type="PackedScene" path="res://assets/items/medkit/medkit.tscn" id="4"]
-[ext_resource type="PackedScene" path="res://assets/hud/HUD.tscn" id="6"]
+[ext_resource type="PackedScene" uid="uid://cyc0qe562iuu7" path="res://Player/Player Camera.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://c6atf1oylboa4" path="res://assets/items/medkit/medkit.tscn" id="4"]
+[ext_resource type="PackedScene" uid="uid://ojsropdeyyma" path="res://assets/hud/HUD.tscn" id="6"]
 [ext_resource type="PackedScene" uid="uid://bqwm23i4oir6q" path="res://entities/Zombie.tscn" id="8"]
 
 [sub_resource type="Environment" id="Environment_anp5t"]
