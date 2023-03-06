@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://ojsropdeyyma"]
+[gd_scene load_steps=3 format=3 uid="uid://ojsropdeyyma"]
 
 [ext_resource type="Script" path="res://assets/HUD/Health Value.gd" id="1_huetg"]
+[ext_resource type="Script" path="res://assets/HUD/Holding.gd" id="2_40s0w"]
 
 [node name="HUD" type="Control"]
 layout_mode = 3
@@ -18,10 +19,14 @@ offset_bottom = 72.0
 text = "x"
 script = ExtResource("1_huetg")
 
-[node name="Health" type="Label" parent="Health"]
+[node name="Health2" type="Label" parent="Health"]
 offset_left = 16.0
 offset_top = 12.0
 offset_right = 234.0
 offset_bottom = 135.0
 text = "Health:
 "
+
+[node name="Holding" type="Sprite2D" parent="."]
+position = Vector2(598, 319)
+script = ExtResource("2_40s0w")

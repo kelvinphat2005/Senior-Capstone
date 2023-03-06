@@ -1,9 +1,8 @@
-[gd_scene load_steps=17 format=3 uid="uid://dkgldeej5dsnf"]
+[gd_scene load_steps=16 format=3 uid="uid://dkgldeej5dsnf"]
 
 [ext_resource type="Script" path="res://Levels/Items.gd" id="1_hcj8x"]
 [ext_resource type="PackedScene" uid="uid://d4jfihvrcwdo" path="res://Player/Player.tscn" id="1_jb03g"]
 [ext_resource type="PackedScene" uid="uid://c5dfmfttwqw1s" path="res://Entities/Zombie.tscn" id="1_l2c1n"]
-[ext_resource type="PackedScene" uid="uid://ojsropdeyyma" path="res://assets/HUD/HUD.tscn" id="1_wqtah"]
 [ext_resource type="PackedScene" uid="uid://cyc0qe562iuu7" path="res://Player/Player Camera.tscn" id="2_gkn5t"]
 [ext_resource type="PackedScene" uid="uid://c105rc2j7ot0h" path="res://assets/items/Bandage/bandage.tscn" id="5_euyxm"]
 [ext_resource type="PackedScene" uid="uid://cyb2wakadbrp7" path="res://assets/items/Medkit/medkit.tscn" id="6_vqhbg"]
@@ -102,8 +101,6 @@ transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 2, 1, -4)
 
 [node name="Zombie" parent="." instance=ExtResource("1_l2c1n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.67117, 2.12726, 0)
-
-[node name="HUD" parent="." instance=ExtResource("1_wqtah")]
 
 [node name="Player" parent="." instance=ExtResource("1_jb03g")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.344028, 2.64306, 0)
