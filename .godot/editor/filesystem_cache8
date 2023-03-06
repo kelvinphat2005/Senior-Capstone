@@ -1,0 +1,59 @@
+2a60927148abd1d33b818b535e306557
+::res://::1678145674
+default_env.tres::Environment::6492386700275520448::1678078426::0::1::::<><>::
+DONUT.tscn::PackedScene::-1::1677883125::0::1::::<><>::
+icon.png::CompressedTexture2D::4909390929762080023::1677883070::1677883161::1::::<><>::
+README.md::TextFile::-1::1677888807::0::1::::<><>::
+::res://assets/::1678059971
+::res://assets/Blender Files/::1678060016
+::res://assets/Fonts/::1678059688
+Poco.ttf::FontFile::4756712332951947702::1677883070::1678059688::1::::<><>::
+::res://assets/HUD/::1678078426
+Health Value.gd::GDScript::-1::1677883125::0::1::::<>Label<>::
+Holding.gd::GDScript::-1::1678078426::0::1::::<>Sprite2D<>::
+hud.tres::FontFile::-1::1678059687::0::1::::<><>::uid://b81gme415p68a
+HUD.tscn::PackedScene::1002347233726762264::1678078426::0::1::::<><>::res://assets/HUD/Health Value.gd<>res://assets/HUD/Holding.gd
+Inventory HUD.tscn::PackedScene::-1::1677883125::0::1::::<><>::
+::res://assets/items/::1678059950
+::res://assets/items/Bandage/::1678078405
+bandage.glb::PackedScene::3841042368933226375::1678059993::1678060904::1::::<><>::uid://4ap72sf00mji<>uid://qqpncpsea2wu
+bandage.tscn::PackedScene::6651212761314589813::1678078405::0::1::::<><>::uid://4ap72sf00mji<>uid://qqpncpsea2wu
+bandage_Bandage Base Color.png::CompressedTexture2D::2036445811997908450::1678059996::1678060016::1::::<><>::
+bandage_Cardboard Base Color.png::CompressedTexture2D::1156985641527716652::1678059996::1678060016::1::::<><>::
+::res://assets/items/Medkit/::1678078404
+Material.material::StandardMaterial3D::-1::1677883070::0::1::::<><>::
+Material_001.material::StandardMaterial3D::-1::1677883070::0::1::::<><>::
+Material_002.material::StandardMaterial3D::-1::1677883070::0::1::::<><>::
+Material_003.material::StandardMaterial3D::-1::1677883070::0::1::::<><>::
+medkit.glb::PackedScene::7743052925812681812::1677883070::1678059670::1::::<><>::uid://dqrlyf7hwyjpx
+medkit.tscn::PackedScene::6461116654175754010::1678078404::0::1::::<><>::uid://dqrlyf7hwyjpx
+medkit_Material Base Color.png::CompressedTexture2D::8318089029479879737::1677883161::1678059669::1::::<><>::
+::res://Entities/::1678078404
+Enemy.gd::GDScript::-1::1678060543::0::1::::Enemy<>CharacterBody3D<>::
+Enemy.tscn::PackedScene::-1::1678059658::0::1::::<><>::res://Entities/Enemy.gd
+Zombie.gd::GDScript::-1::1678060589::0::1::::<>Enemy<>::
+Zombie.tscn::PackedScene::6885025117141406302::1678078404::0::1::::<><>::res://Entities/Zombie.gd
+::res://Levels/::1678077782
+Items.gd::GDScript::-1::1678077782::0::1::::<>Node<>::
+::res://Levels/Test Level/::1678059653
+Material.material::StandardMaterial3D::-1::1677883070::0::1::::<><>::
+Test Level.glb::PackedScene::3660526290487125457::1677883070::1677883162::1::::<><>::
+Test Level.tscn::PackedScene::-1::1678059653::0::1::::<><>::uid://d4jfihvrcwdo<>uid://bsfgllf5eh3v6<>uid://cyc0qe562iuu7<>uid://c6atf1oylboa4<>uid://ojsropdeyyma<>uid://bqwm23i4oir6q
+::res://Player/::1678078405
+Inventory.gd::GDScript::-1::1678077377::0::1::::Inventory<>Node<>::
+Player Camera.gd::GDScript::-1::1678060495::0::1::::<>Node3D<>::
+Player Camera.tscn::PackedScene::6463049125611189352::1678078405::0::1::::<><>::res://Player/Player Camera.gd
+Player.gd::GDScript::-1::1678078404::0::1::::<>CharacterBody3D<>::
+Player.tscn::PackedScene::270989299663651148::1678078405::0::1::::<><>::res://Player/Player.gd<>res://Player/Inventory.gd<>uid://c0syt5xct8syx<>uid://3quptnhwmbt0
+player_model.tscn::PackedScene::3993179653693202338::1678059614::0::1::::<><>::
+::res://Player/Model/::1678059727
+Player Model.glb::PackedScene::8555352678349509921::1677883070::1678059727::1::::<><>::uid://b6su5es46vl2j<>uid://drisk6s36vj7w
+Player Model_STCR_armor_plate.png::CompressedTexture2D::4600701788977429891::1678059609::1678059654::1::::<><>::
+Player Model_STCR_body.png::CompressedTexture2D::8370099836111966354::1678059609::1678059654::1::::<><>::
+STCR_armor.material::StandardMaterial3D::-1::1678058784::0::1::::<><>::
+STCR_body.material::StandardMaterial3D::-1::1677883070::0::1::::<><>::
+untitled_STCR_armor_plate.png::CompressedTexture2D::6566214007169261639::1677883162::1678059654::1::::<><>::
+untitled_STCR_body.png::CompressedTexture2D::1999559811067796867::1677883162::1678059654::1::::<><>::
+::res://test/::1678078405
+first scebe.tscn::PackedScene::-1::1678059653::0::1::::<><>::uid://d4jfihvrcwdo
+new_test_level.tscn::PackedScene::7874210215007897759::1678078405::0::1::::<><>::res://Levels/Items.gd<>uid://d4jfihvrcwdo<>uid://c5dfmfttwqw1s<>uid://cyc0qe562iuu7<>uid://c105rc2j7ot0h<>uid://cyb2wakadbrp7

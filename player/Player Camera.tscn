@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=2 format=3 uid="uid://cyc0qe562iuu7"]
 
-[ext_resource path="res://player/Player Camera.gd" type="Script" id=1]
+[ext_resource type="Script" path="res://Player/Player Camera.gd" id="1_pi3p1"]
 
 [node name="Player Camera3D" type="Camera3D"]
-script = ExtResource( 1 )
+fov = 30.0
+script = ExtResource("1_pi3p1")
+inner_cam_thresh = 2
+outer_cam_thresh = 10

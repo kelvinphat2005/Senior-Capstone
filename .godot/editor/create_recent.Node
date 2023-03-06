@@ -1,0 +1,13 @@
+Sprite2D
+Container
+CollisionShape3D
+Area3D
+CharacterBody3D
+StaticBody3D
+Node
+AnimationPlayer
+AnimationTree
+NavigationRegion3D
+DirectionalLight3D
+WorldEnvironment
+OmniLight3D

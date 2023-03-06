@@ -31,15 +31,13 @@ func _ready():
 		READY = true
 
 		# sets camera position
-		transform.origin = Vector3(player_pos.x,20+y_offset,player_pos.z+12+z_offset)
+		# z is how far behind the cam is from player
+		transform.origin = Vector3(player_pos.x,12+y_offset,player_pos.z+8+z_offset)
 		rotation_degrees = Vector3(-45, 0, 0) 
 		
 		# creates origin point
 		# inner and outer cam thresholds are based on this
 		var origin = Vector3(position.x,0,position.z)
-	
-	print("CAMERA READY")
-	print(player)
 
 func _process(delta):
 	# print(self.position)

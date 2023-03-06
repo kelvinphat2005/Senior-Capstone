@@ -1,13 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://bqwm23i4oir6q"]
+[gd_scene load_steps=4 format=3 uid="uid://c5dfmfttwqw1s"]
 
-[ext_resource type="Script" path="res://entities/Zombie.gd" id="1"]
+[ext_resource type="Script" path="res://Entities/Zombie.gd" id="1_aa5as"]
 
 [sub_resource type="CapsuleShape3D" id="1"]
 
 [sub_resource type="CapsuleMesh" id="2"]
 
 [node name="Zombie" type="CharacterBody3D"]
-script = ExtResource("1")
+script = ExtResource("1_aa5as")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("1")

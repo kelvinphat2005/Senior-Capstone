@@ -6,11 +6,11 @@ class_name Enemy
 @onready var player
 # var velocity = Vector3.ZERO
 
-@export var speed = 7.0 # max speed
+@export var speed = 2.0 # max speed
 var gravity = 75.0
 @export var accel = 0.3
 @export var max_health = 0
-@export var attack_range = 3.0 # range is from CENTER of node
+@export var attack_range = 1.5 # range is from CENTER of node
 @export var attack_damage = 5
 var health = max_health
 

@@ -1,0 +1,11 @@
+res://default_env.tres
+res://Entities/Zombie.tscn
+res://Levels/Items.gd
+res://assets/items/Medkit/medkit.tscn
+res://Player/Player.tscn
+res://assets/items/Bandage/bandage.tscn
+res://Player/Player Camera.tscn
+res://assets/HUD/HUD.tscn
+res://test/new_test_level.tscn
+res://Player/Player.gd
+res://assets/HUD/Holding.gd

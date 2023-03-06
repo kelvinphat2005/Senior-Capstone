@@ -1,12 +1,12 @@
 extends CharacterBody3D
 
-class_name Player
+# class_name Player
 
 # Declare member variables here. Examples:
-@export var speed = 14.0 # max speed
+@export var speed = 4.0 # max speed
 @export var jump_impuslse = 20.0
 @export var gravity = 75.0
-@export var accel = 1.5
+@export var accel = 0.8
 
 var player_x = 0
 var player_z = 0
@@ -23,6 +23,7 @@ var cursor
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	camera = get_parent().get_node("Player Camera3D")
+	instance_hud()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -82,3 +83,7 @@ func look_towards_cursor():
 		
 		if collider.get_class() == "Enemy":
 			print("GAGAGAGAG")
+
+func instance_hud():
+	var hud = load("res://assets/HUD/HUD.tscn")
+	add_child(hud.instantiate())
