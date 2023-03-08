@@ -18,6 +18,9 @@ func _process(delta):
 	# print("Inventory: ", inventory)
 	pass
 
+func print_inventory():
+	print("Inventory: ", inventory)
+
 func add_item(item):
 	inventory.append(item)
 	

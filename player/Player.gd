@@ -1,6 +1,7 @@
 extends CharacterBody3D
 
 # class_name Player
+@onready var player = $"."
 
 # Declare member variables here. Examples:
 @export var speed = 4.0 # max speed
@@ -19,11 +20,13 @@ var health = max_health
 # player dependent instances
 var camera
 var cursor
+@onready var inventory = $Inventory
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	camera = get_parent().get_node("Player Camera3D")
 	instance_hud()
+	print(inventory.inventory)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

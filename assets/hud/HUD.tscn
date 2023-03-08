@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://ojsropdeyyma"]
+[gd_scene load_steps=4 format=3 uid="uid://ojsropdeyyma"]
 
 [ext_resource type="Script" path="res://assets/HUD/Health Value.gd" id="1_huetg"]
+[ext_resource type="Texture2D" uid="uid://cnm5m50o1sgqc" path="res://assets/items/Bandage/Bandage.png" id="2_1vxa2"]
 [ext_resource type="Script" path="res://assets/HUD/Holding.gd" id="2_40s0w"]
 
 [node name="HUD" type="Control"]
@@ -29,4 +30,5 @@ text = "Health:
 
 [node name="Holding" type="Sprite2D" parent="."]
 position = Vector2(598, 319)
+texture = ExtResource("2_1vxa2")
 script = ExtResource("2_40s0w")
