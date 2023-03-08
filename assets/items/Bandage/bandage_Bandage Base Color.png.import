@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://4ap72sf00mji"
-path.s3tc="res://.godot/imported/bandage_Bandage Base Color.png-e23db955b81163136e5da196efa59278.s3tc.ctex"
+path.s3tc="res://.godot/imported/bandage_Bandage Base Color.png-f1c7b892546f70ad3e8aa3b5c5ef1c5b.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ generator_parameters={}
 
 [deps]
 
-source_file="res://assets/items/Bandage/bandage_Bandage Base Color.png"
-dest_files=["res://.godot/imported/bandage_Bandage Base Color.png-e23db955b81163136e5da196efa59278.s3tc.ctex"]
+source_file="res://assets/items/bandage/bandage_Bandage Base Color.png"
+dest_files=["res://.godot/imported/bandage_Bandage Base Color.png-f1c7b892546f70ad3e8aa3b5c5ef1c5b.s3tc.ctex"]
 
 [params]
 

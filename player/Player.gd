@@ -88,5 +88,5 @@ func look_towards_cursor():
 			print("GAGAGAGAG")
 
 func instance_hud():
-	var hud = load("res://assets/HUD/HUD.tscn")
+	var hud = load("res://assets/hud/HUD.tscn")
 	add_child(hud.instantiate())

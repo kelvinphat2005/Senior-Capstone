@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dik17kxcmsrb5"
-path="res://.godot/imported/medkit.glb-e022abd58998c5fb4abe125a75a346f5.scn"
+path="res://.godot/imported/medkit.glb-b8f0e37fb4b85fa7560acbc6a314966b.scn"
 
 [deps]
 
-source_file="res://assets/items/Medkit/medkit.glb"
-dest_files=["res://.godot/imported/medkit.glb-e022abd58998c5fb4abe125a75a346f5.scn"]
+source_file="res://assets/items/medkit/medkit.glb"
+dest_files=["res://.godot/imported/medkit.glb-b8f0e37fb4b85fa7560acbc6a314966b.scn"]
 
 [params]
 

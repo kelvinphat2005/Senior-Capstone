@@ -1,8 +1,10 @@
 [gd_scene load_steps=4 format=3 uid="uid://ojsropdeyyma"]
 
 [ext_resource type="Script" path="res://assets/HUD/Health Value.gd" id="1_huetg"]
-[ext_resource type="Texture2D" uid="uid://cnm5m50o1sgqc" path="res://assets/items/Bandage/Bandage.png" id="2_1vxa2"]
 [ext_resource type="Script" path="res://assets/HUD/Holding.gd" id="2_40s0w"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_casna"]
+load_path = "res://.godot/imported/Bandage.png-a9092d0c1e4c2fc6429522f6b3a0d941.ctex"
 
 [node name="HUD" type="Control"]
 layout_mode = 3
@@ -30,5 +32,5 @@ text = "Health:
 
 [node name="Holding" type="Sprite2D" parent="."]
 position = Vector2(598, 319)
-texture = ExtResource("2_1vxa2")
+texture = SubResource("CompressedTexture2D_casna")
 script = ExtResource("2_40s0w")

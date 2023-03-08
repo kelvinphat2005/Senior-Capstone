@@ -7,6 +7,11 @@ var player_in_scene = false
 
 @onready var test = preload("res://assets/items/Medkit/Medkit.png")
 
+@onready var all_item_logos = {
+	"bandage": preload("res://assets/items/bandage/Bandage.png"),
+	"medkit": preload("res://assets/items/medkit/Medkit.png")
+}
+
 # Called when the node enters the scene tree for the first time.
 # HUD is instantiated by the Player node
 # so the parent of parent is player <-- wow
@@ -17,6 +22,11 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	var holding = inventory.equipped_item
+	
+	if holding != null:
+		set_texture(all_item_logos[holding.name])
+	
 	if Input.is_action_pressed("jump"):
 		set_texture(test)
 	

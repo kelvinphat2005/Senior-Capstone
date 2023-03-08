@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://buyvn3cklsidb"
-path="res://.godot/imported/bandage.glb-3e41739d06434768bd36a401dfeec7b8.scn"
+path="res://.godot/imported/bandage.glb-5577f58e8e5cf3dd6a06c9befbe17ab2.scn"
 
 [deps]
 
-source_file="res://assets/items/Bandage/bandage.glb"
-dest_files=["res://.godot/imported/bandage.glb-3e41739d06434768bd36a401dfeec7b8.scn"]
+source_file="res://assets/items/bandage/bandage.glb"
+dest_files=["res://.godot/imported/bandage.glb-5577f58e8e5cf3dd6a06c9befbe17ab2.scn"]
 
 [params]
 

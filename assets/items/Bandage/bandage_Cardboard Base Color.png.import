@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://qqpncpsea2wu"
-path.s3tc="res://.godot/imported/bandage_Cardboard Base Color.png-fffe675e9fa55c012cb4d497689e169f.s3tc.ctex"
+path.s3tc="res://.godot/imported/bandage_Cardboard Base Color.png-c80adcce96e72b9f08de7f45343e4b36.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ generator_parameters={}
 
 [deps]
 
-source_file="res://assets/items/Bandage/bandage_Cardboard Base Color.png"
-dest_files=["res://.godot/imported/bandage_Cardboard Base Color.png-fffe675e9fa55c012cb4d497689e169f.s3tc.ctex"]
+source_file="res://assets/items/bandage/bandage_Cardboard Base Color.png"
+dest_files=["res://.godot/imported/bandage_Cardboard Base Color.png-c80adcce96e72b9f08de7f45343e4b36.s3tc.ctex"]
 
 [params]
 
