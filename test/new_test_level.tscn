@@ -92,11 +92,14 @@ size = Vector3(10, 10, 2)
 [node name="Items" type="Node" parent="."]
 script = ExtResource("1_1xg20")
 
-[node name="medkit" parent="Items" instance=ExtResource("6_vqhbg")]
+[node name="002 medkit" parent="Items" instance=ExtResource("6_vqhbg")]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 2, 1, -4)
 
-[node name="bandage" parent="Items" instance=ExtResource("6_54ldf")]
+[node name="001 bandage" parent="Items" instance=ExtResource("6_54ldf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.371022, 1.00053, -3.53841)
+
+[node name="001 bandage2" parent="Items" instance=ExtResource("6_54ldf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.73306, 1.00053, -3.53841)
 
 [node name="Player" parent="." instance=ExtResource("1_jb03g")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.344028, 2.64306, 0)

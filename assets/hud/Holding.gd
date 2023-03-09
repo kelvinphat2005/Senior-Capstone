@@ -8,8 +8,8 @@ var player_in_scene = false
 @onready var test = preload("res://assets/items/Medkit/Medkit.png")
 
 @onready var all_item_logos = {
-	"bandage": preload("res://assets/items/bandage/Bandage.png"),
-	"medkit": preload("res://assets/items/medkit/Medkit.png")
+	"001" : preload("res://assets/items/bandage/Bandage.png"),
+	"002": preload("res://assets/items/medkit/Medkit.png")
 }
 
 # Called when the node enters the scene tree for the first time.
@@ -25,7 +25,9 @@ func _process(delta):
 	var holding = inventory.equipped_item
 	
 	if holding != null:
-		set_texture(all_item_logos[holding.name])
+		var item_id = holding.name.substr(0,3)
+		print(item_id)
+		set_texture(all_item_logos[item_id])
 	
 	if Input.is_action_pressed("jump"):
 		set_texture(test)
