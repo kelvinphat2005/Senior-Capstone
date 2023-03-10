@@ -21,11 +21,15 @@ var health = max_health
 var camera
 var cursor
 @onready var inventory = $Inventory
+@onready var inventory_hud = $"Inventory HUD"
+
+var inventory_open = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	camera = get_parent().get_node("Player Camera3D")
 	instance_hud()
+	inventory_hud.visible = false
 	print(inventory.inventory)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -57,6 +61,16 @@ func _process(delta):
 	move_and_slide()
 	
 	look_towards_cursor()
+	
+	if Input.is_action_pressed("inventory"):
+		if inventory_open:
+			inventory_hud.visible = false
+			inventory_open = false
+		else:
+			inventory_hud.visible = true
+			inventory_open = true
+		OS.delay_msec(200)
+		
 
 func look_towards_cursor():
 	var ray_origin = Vector3.ZERO

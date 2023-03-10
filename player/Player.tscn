@@ -1,9 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://bkt5mnyryllmv"]
+[gd_scene load_steps=14 format=3 uid="uid://bkt5mnyryllmv"]
 
 [ext_resource type="Script" path="res://Player/Player.gd" id="1_lq0nv"]
 [ext_resource type="Script" path="res://Player/Inventory.gd" id="2_rioom"]
 [ext_resource type="Texture2D" uid="uid://c0syt5xct8syx" path="res://player/model/untitled_STCR_armor_plate.png" id="3_jlans"]
 [ext_resource type="Texture2D" uid="uid://3quptnhwmbt0" path="res://player/model/untitled_STCR_body.png" id="4_myqho"]
+[ext_resource type="PackedScene" uid="uid://b5o0tux6g5gsh" path="res://assets/HUD/Inventory HUD.tscn" id="5_5y8y7"]
 
 [sub_resource type="CapsuleShape3D" id="1"]
 
@@ -646,3 +647,7 @@ skin = SubResource("Skin_d5tie")
 gi_mode = 0
 mesh = SubResource("ArrayMesh_0odmk")
 skin = SubResource("Skin_d5tie")
+
+[node name="Inventory HUD" parent="." instance=ExtResource("5_5y8y7")]
+grow_horizontal = 2
+grow_vertical = 2
