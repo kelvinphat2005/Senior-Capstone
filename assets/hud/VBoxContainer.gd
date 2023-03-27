@@ -1,14 +1,13 @@
 extends VBoxContainer
 
-@onready var player = get_parent().get_parent().get_parent()
+@onready var player = get_parent().get_parent().get_parent().get_parent()
 
 var finished_loading_slots = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass
-
-
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if player.inventory_open:
@@ -19,7 +18,7 @@ func _process(delta):
 		for i in get_children():
 			i.queue_free()
 		finished_loading_slots = false
-	
+		
 func load_slots():
 	if finished_loading_slots == false:
 		var inventory = player.inventory.inventory
@@ -31,3 +30,8 @@ func load_slots():
 			child.item = inventory[current_slot]
 			child.text = child.item.item_name
 			current_slot += 1
+
+func select_item(item):
+	var inventory = player.inventory
+	inventory.equip_item(item)
+	print("inv select", item)

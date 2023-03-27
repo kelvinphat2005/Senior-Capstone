@@ -89,6 +89,9 @@ size = Vector3(10, 10, 2)
 
 [node name="new test level" type="Node"]
 
+[node name="Player" parent="." instance=ExtResource("1_jb03g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.344028, 2.64306, 0)
+
 [node name="Items" type="Node" parent="."]
 script = ExtResource("1_1xg20")
 
@@ -100,9 +103,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.371022, 1.00053, -3.53841)
 
 [node name="bandage2" parent="Items" instance=ExtResource("6_54ldf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.73306, 1.00053, -3.53841)
-
-[node name="Player" parent="." instance=ExtResource("1_jb03g")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.344028, 2.64306, 0)
 
 [node name="Player Camera3D" parent="." instance=ExtResource("2_gkn5t")]
 

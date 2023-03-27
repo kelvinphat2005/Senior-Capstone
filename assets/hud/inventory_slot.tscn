@@ -3,8 +3,9 @@
 [ext_resource type="Script" path="res://assets/hud/Inventory Slot.gd" id="1_6w55w"]
 
 [node name="Inventory Slot" type="Button"]
+offset_top = -1.0
+offset_right = 383.0
+offset_bottom = 40.0
 text = "test"
 alignment = 0
 script = ExtResource("1_6w55w")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]

@@ -26,8 +26,11 @@ func add_item(item):
 func remove_item(item):
 	inventory.pop(item)
 
-func item_equip(item):
-	pass
+func equip_item(item):
+	equipped_item = item
+	
+func get_equipped():
+	return equipped_item
 
 func test():
 	print("TEST")

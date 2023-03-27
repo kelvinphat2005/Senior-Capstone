@@ -8,6 +8,7 @@ var player_in_scene = false
 @onready var test = preload("res://assets/items/Medkit/Medkit.png")
 
 @onready var all_item_logos = {
+	"fist": preload("res://assets/items/fist/fist.png"),
 	"bandage" : preload("res://assets/items/bandage/Bandage.png"),
 	"medkit": preload("res://assets/items/medkit/Medkit.png")
 }
@@ -24,7 +25,9 @@ func _ready():
 func _process(delta):
 	var holding = inventory.equipped_item
 	
-	if holding != null:
+	if holding == null:
+		set_texture(all_item_logos["fist"])
+	else:
 		set_texture(all_item_logos[holding.item_name])
 	
 	if Input.is_action_pressed("jump"):

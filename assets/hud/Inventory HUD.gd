@@ -1,16 +1,14 @@
-extends Button
+extends Control
 
-var item = null
-
-@onready var container = get_parent()
+@onready var item_name = $"Item Name"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
+	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	change_item_name("test")
 
-func _pressed():
-	container.select_item(item)
+func change_item_name(name):
+	item_name.text = name

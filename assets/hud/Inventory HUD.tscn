@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://b5o0tux6g5gsh"]
+[gd_scene load_steps=4 format=3 uid="uid://b5o0tux6g5gsh"]
 
+[ext_resource type="Script" path="res://assets/HUD/Inventory HUD.gd" id="1_6f8xq"]
 [ext_resource type="Script" path="res://assets/HUD/VBoxContainer.gd" id="1_stoss"]
+[ext_resource type="Texture2D" uid="uid://dn88u2q2cxw7c" path="res://assets/hud/HUD_rev_1.png" id="2_tctks"]
 
 [node name="Inventory HUD" type="Control"]
 layout_mode = 3
@@ -9,25 +11,45 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_6f8xq")
 
-[node name="Label" type="Label" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(320, 180)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_tctks")
+
+[node name="Item Name" type="Label" parent="."]
+modulate = Color(0, 0, 0, 1)
 layout_mode = 0
-offset_left = 16.0
-offset_top = 15.0
-offset_right = 91.0
-offset_bottom = 41.0
+offset_left = 26.0
+offset_top = 63.0
+offset_right = 113.0
+offset_bottom = 89.0
+text = "Item Name
+"
+
+[node name="Inventory" type="Label" parent="."]
+modulate = Color(0, 0, 0, 1)
+top_level = true
+layout_mode = 0
+offset_left = 14.0
+offset_top = 12.0
+offset_right = 89.0
+offset_bottom = 38.0
 text = "Inventory
 "
 
-[node name="ScrollContainer" type="ScrollContainer" parent="."]
-layout_direction = 2
-layout_mode = 0
-offset_left = 315.0
-offset_top = 59.0
-offset_right = 612.0
-offset_bottom = 341.0
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer"]
+top_level = true
+layout_direction = 2
+offset_left = 390.0
+offset_top = 96.0
+offset_right = 614.0
+offset_bottom = 333.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/ScrollContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 alignment = 1
