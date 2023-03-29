@@ -1,0 +1,59 @@
+[gd_scene load_steps=6 format=3 uid="uid://b1i80l7ckbwj7"]
+
+[ext_resource type="PackedScene" uid="uid://bkt5mnyryllmv" path="res://player/Player.tscn" id="1_g3a4n"]
+[ext_resource type="PackedScene" uid="uid://cyc0qe562iuu7" path="res://player/Player Camera.tscn" id="2_sjgax"]
+[ext_resource type="Script" path="res://player/Player Camera.gd" id="3_vih58"]
+[ext_resource type="PackedScene" uid="uid://hd1wry8448mt" path="res://levels/starting level/geometry.tscn" id="4_giuua"]
+
+[sub_resource type="Environment" id="Environment_oggmw"]
+background_mode = 1
+ambient_light_source = 1
+reflected_light_source = 2
+ssil_radius = 10.05
+ssil_intensity = 1.36
+glow_enabled = true
+glow_normalized = true
+glow_intensity = 0.0
+volumetric_fog_enabled = true
+volumetric_fog_albedo = Color(0.65098, 0.72549, 0.94902, 1)
+volumetric_fog_emission = Color(0.839216, 0.894118, 1, 1)
+
+[node name="starting level" type="Node"]
+
+[node name="Player" parent="." instance=ExtResource("1_g3a4n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.607379, 1.70593, 5.14618)
+
+[node name="Player Camera3D" parent="." instance=ExtResource("2_sjgax")]
+script = ExtResource("3_vih58")
+
+[node name="level 1" parent="." instance=ExtResource("4_giuua")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.10976, 0, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_oggmw")
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="."]
+transform = Transform3D(0.739067, 0, 0.673632, 0, 1, 0, -0.673632, 0, 0.739067, 5.5207, 4.53874, 5.12668)
+light_energy = 0.457
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 0.0
+light_specular = 0.0
+omni_range = 5.713
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="."]
+transform = Transform3D(-0.845243, 0, 0.534382, 0, 1, 0, -0.534382, 0, -0.845243, -1.04523, 4.53446, -3.72812)
+light_energy = 0.457
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 0.0
+light_specular = 0.0
+omni_range = 6.184
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(-0.27817, 0, -0.960532, 0, 1, 0, 0.960532, 0, -0.27817, -6.49446, 2.26723, -3.04085)
+light_energy = 16.0
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 0.0
+light_specular = 0.0
+omni_range = 4096.0
+
+[editable path="level 1"]
