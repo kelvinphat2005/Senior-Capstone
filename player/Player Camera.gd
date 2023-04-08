@@ -42,7 +42,6 @@ func _ready():
 func _process(delta):
 	player_pos = player.position
 	position = (Vector3(player_pos.x,8,player_pos.z+z_offset+3))
-	print(position)
 	'''player_pos = player.position
 	# print(self.position)
 	if READY:

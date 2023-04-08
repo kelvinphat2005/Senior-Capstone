@@ -1,9 +1,10 @@
-[gd_scene load_steps=16 format=3 uid="uid://bkt5mnyryllmv"]
+[gd_scene load_steps=17 format=3 uid="uid://bkt5mnyryllmv"]
 
 [ext_resource type="Script" path="res://Player/Player.gd" id="1_lq0nv"]
 [ext_resource type="Script" path="res://Player/Inventory.gd" id="2_rioom"]
-[ext_resource type="Texture2D" uid="uid://c0syt5xct8syx" path="res://player/model/untitled_STCR_armor_plate.png" id="3_jlans"]
-[ext_resource type="Texture2D" uid="uid://3quptnhwmbt0" path="res://player/model/untitled_STCR_body.png" id="4_myqho"]
+[ext_resource type="Texture2D" uid="uid://c0syt5xct8syx" path="res://player/Model/untitled_STCR_armor_plate.png" id="3_jlans"]
+[ext_resource type="Script" path="res://player/Quest Handler.gd" id="4_m7iqy"]
+[ext_resource type="Texture2D" uid="uid://3quptnhwmbt0" path="res://player/Model/untitled_STCR_body.png" id="4_myqho"]
 [ext_resource type="PackedScene" uid="uid://b5o0tux6g5gsh" path="res://assets/hud/Inventory HUD.tscn" id="5_5y8y7"]
 
 [sub_resource type="CapsuleShape3D" id="1"]
@@ -295,6 +296,9 @@ script = ExtResource("1_lq0nv")
 
 [node name="Inventory" type="Node" parent="."]
 script = ExtResource("2_rioom")
+
+[node name="Quest Handler" type="Node" parent="."]
+script = ExtResource("4_m7iqy")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -0.999909, -0.0134561, 0, 0.0134561, -0.999909, 0, -0.593281, 0)

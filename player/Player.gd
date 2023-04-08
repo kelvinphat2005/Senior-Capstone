@@ -20,8 +20,10 @@ var health = max_health
 # player dependent instances
 var camera
 var cursor
+
 @onready var inventory = $Inventory
 @onready var inventory_hud = $"Inventory HUD"
+@onready var quest_handler = $"Quest Handler"
 
 var inventory_open = false
 
