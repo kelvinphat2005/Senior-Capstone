@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c0syt5xct8syx"
-path.s3tc="res://.godot/imported/untitled_STCR_armor_plate.png-31b3a17fdda9c3ce43cdbdd10d935e58.s3tc.ctex"
+path.s3tc="res://.godot/imported/untitled_STCR_armor_plate.png-a6144aade165e555b8324193371d1b66.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ generator_parameters={}
 
 [deps]
 
-source_file="res://Player/model/untitled_STCR_armor_plate.png"
-dest_files=["res://.godot/imported/untitled_STCR_armor_plate.png-31b3a17fdda9c3ce43cdbdd10d935e58.s3tc.ctex"]
+source_file="res://player/Model/untitled_STCR_armor_plate.png"
+dest_files=["res://.godot/imported/untitled_STCR_armor_plate.png-a6144aade165e555b8324193371d1b66.s3tc.ctex"]
 
 [params]
 

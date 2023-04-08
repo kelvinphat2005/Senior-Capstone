@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://drisk6s36vj7w"
-path.s3tc="res://.godot/imported/Player Model_STCR_body.png-0bddd5980b4919db15eb6116e099a2ff.s3tc.ctex"
+path.s3tc="res://.godot/imported/Player Model_STCR_body.png-b32adbe790c3e1b5b51dc9a941596420.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ generator_parameters={}
 
 [deps]
 
-source_file="res://Player/model/Player Model_STCR_body.png"
-dest_files=["res://.godot/imported/Player Model_STCR_body.png-0bddd5980b4919db15eb6116e099a2ff.s3tc.ctex"]
+source_file="res://player/Model/Player Model_STCR_body.png"
+dest_files=["res://.godot/imported/Player Model_STCR_body.png-b32adbe790c3e1b5b51dc9a941596420.s3tc.ctex"]
 
 [params]
 
