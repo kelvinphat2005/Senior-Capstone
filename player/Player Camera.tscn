@@ -3,7 +3,5 @@
 [ext_resource type="Script" path="res://Player/Player Camera.gd" id="1_pi3p1"]
 
 [node name="Player Camera3D" type="Camera3D"]
-fov = 30.0
+fov = 35.0
 script = ExtResource("1_pi3p1")
-inner_cam_thresh = 2
-outer_cam_thresh = 10
