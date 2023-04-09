@@ -115,3 +115,6 @@ func show_hud():
 	hud.visible = true
 	for child in hud.get_node("Health").get_children():
 		child.visible = true
+
+func get_quests():
+	return quest_handler.all_quests

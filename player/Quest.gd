@@ -15,5 +15,7 @@ func _ready():
 func _process(delta):
 	pass
 	
+
 func format():
 	print("Quest Name: {name}, Completed {completed}, next_quest{quest}".format({"name":quest_name,"completed":completed,"quest": next_quest}))
+

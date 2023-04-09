@@ -9,9 +9,8 @@ var quest_handler
 func _ready():
 	player = get_parent().get_parent()
 	quest_handler = player.quest_handler
+	text = "No Quests"
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	text = "Current Quest: {name} - {description}".format({
-		"name": quest_handler.all_quests[0].quest_name, 
-		"description": quest_handler.all_quests[0].quest_description})
+	pass

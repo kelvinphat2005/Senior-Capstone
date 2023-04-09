@@ -16,6 +16,11 @@ func _ready():
 	quest2.quest_description = "Fill the cup with water"
 	quest.next_quest = quest2
 	
+	var quest3 = preload("res://player/Quest.gd").new()
+	quest3.quest_name = "None"
+	quest3.quest_description = "None"
+	quest2.next_quest = quest3
+	
 	player.quest_handler.all_quests.append(quest)
 	
 	
@@ -26,5 +31,5 @@ func _process(delta):
 	print(player.quest_handler.all_quests)
 	if player.inventory.equipped_item != null:
 		if player.inventory.equipped_item.item_name == "cup":
-			player.quest_handler.complete_quest("Retrieve Cup")
+				player.quest_handler.complete_quest("Retrieve Cup")
 			
