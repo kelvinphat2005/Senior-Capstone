@@ -8,6 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://b5o0tux6g5gsh" path="res://assets/hud/Inventory HUD.tscn" id="5_5y8y7"]
 
 [sub_resource type="CapsuleShape3D" id="1"]
+radius = 0.25
+height = 2.374
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2ft25"]
 resource_name = "STCR_armor"
@@ -301,7 +303,7 @@ script = ExtResource("2_rioom")
 script = ExtResource("4_m7iqy")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -0.999909, -0.0134561, 0, 0.0134561, -0.999909, 0, -0.593281, 0)
+transform = Transform3D(1, 0, 0, 0, -1, 8.74227e-08, 0, -8.74227e-08, -1, 0, -0.37627, 0)
 shape = SubResource("1")
 
 [node name="RayCast3D" type="RayCast3D" parent="."]

@@ -10,7 +10,8 @@ var player_in_scene = false
 @onready var all_item_logos = {
 	"fist": preload("res://assets/items/fist/fist.png"),
 	"bandage" : preload("res://assets/items/bandage/Bandage.png"),
-	"medkit": preload("res://assets/items/medkit/Medkit.png")
+	"medkit": preload("res://assets/items/medkit/Medkit.png"),
+	"cup": preload("res://assets/items/cup/Cup.png")
 }
 
 # Called when the node enters the scene tree for the first time.

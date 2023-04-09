@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dc8xh1vlsd4ej"]
+
+[ext_resource type="PackedScene" uid="uid://jmlvsre151s4" path="res://assets/objects/counter/counter.glb" id="1_5pmwg"]
+
+[node name="counter" instance=ExtResource("1_5pmwg")]
+transform = Transform3D(0.23, 0, 0, 0, 0.23, 0, 0, 0, 0.23, 0, 0, 0)
