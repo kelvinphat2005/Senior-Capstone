@@ -8,7 +8,6 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	print(all_quests.size())
 	if all_quests.size() > 0:
 		display(all_quests[0].quest_name, all_quests[0].quest_description)
 	else:
@@ -27,6 +26,15 @@ func complete_quest(name):
 					else:
 						next_quest(quest.next_quest)
 					all_quests.erase(quest)
+					
+				if quest.next_events[0] != null:
+					var events = get_parent().get_parent().get_node("Events")
+					for quest_event in quest.next_events:
+						for child in events.get_children():
+							print(child)
+							if child.event_name == quest_event:
+								child.out_function()
+
 				quest.completed = true
 
 func next_quest(quest_obj):
@@ -34,5 +42,4 @@ func next_quest(quest_obj):
 
 func display(name, description):
 	var hud = get_parent().player.get_node("HUD")
-	print(hud)
 	hud.get_node("Label").text = "Quest: " + name + " - " + description

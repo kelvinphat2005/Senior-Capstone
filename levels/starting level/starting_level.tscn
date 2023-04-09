@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://b04urfclklc5y"]
+[gd_scene load_steps=16 format=3 uid="uid://b04urfclklc5y"]
 
 [ext_resource type="PackedScene" uid="uid://bkt5mnyryllmv" path="res://player/Player.tscn" id="1_g3a4n"]
 [ext_resource type="Script" path="res://levels/starting level/starting_level.gd" id="1_pnmbe"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cyc0qe562iuu7" path="res://player/Player Camera.tscn" id="2_sjgax"]
 [ext_resource type="Script" path="res://levels/starting level/Fridge Interact.gd" id="3_3x03e"]
 [ext_resource type="Script" path="res://player/Player Camera.gd" id="3_vih58"]
+[ext_resource type="Script" path="res://levels/starting level/Fill Cup Complete.gd" id="4_0so5r"]
 [ext_resource type="PackedScene" uid="uid://bcxgl0176mtw3" path="res://assets/objects/fridge/fridge.tscn" id="5_fvke3"]
 [ext_resource type="PackedScene" uid="uid://bp5at3xqln46w" path="res://levels/starting level/level 1.glb" id="5_jbrmq"]
 [ext_resource type="PackedScene" uid="uid://cah5ffevt8hj4" path="res://assets/objects/counter/counter_2.tscn" id="7_vmuv6"]
@@ -43,6 +44,9 @@ script = ExtResource("3_3x03e")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Events/Fridge Interact"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.39839, 0, 2.4392)
 shape = SubResource("CylinderShape3D_pfqat")
+
+[node name="Fill Cup Complete" type="Area3D" parent="Events"]
+script = ExtResource("4_0so5r")
 
 [node name="Items" type="Node" parent="."]
 script = ExtResource("2_1poi5")

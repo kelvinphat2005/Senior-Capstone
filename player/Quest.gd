@@ -5,7 +5,8 @@ class_name Quest
 var quest_name
 var quest_description
 var completed = false # if quest is completed
-var next_quest = null # instance a new quest and add it here -- this is the next quest in the chain once 
+var next_quest = null # instance a new quest and add it here -- this is the next quest in the chain once
+var next_events = [null] # events to activate once completed
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

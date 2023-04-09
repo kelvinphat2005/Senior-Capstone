@@ -28,6 +28,9 @@ var hud
 
 var inventory_open = false
 
+###
+var game_stage = 0
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	camera = get_parent().get_node("Player Camera3D")
