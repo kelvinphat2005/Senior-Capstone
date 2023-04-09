@@ -16,17 +16,17 @@ Item Logo pt2: Go to Holding.gd (res://assets/HUD/Holding.gd) and add item to "a
 
 ## Creating Quest
 Creating Quest:
-'''
+```
 quest = preload("res://player/Quest.gd").new()
 quest.quest_name = "Quest Name"
-'''
+```
 
 Chaining Quests Together:
-'''
+```
 quest_after = preload("res://player/Quest.gd").new()
 quest.next_quest = quest_after
-'''
+```
 -- quest.next_quest needs to be a node
 
 Add quest to quest handlers' all_quest list:
-'player.quest_handler.all_quests.append(quest)'
+`player.quest_handler.all_quests.append(quest)`
