@@ -4,3 +4,24 @@
 
 [node name="counter2" instance=ExtResource("1_uiu5p")]
 transform = Transform3D(0.23, 0, 0, 0, 0.23, 0, 0, 0, 0.23, 0, 0, 0)
+
+[node name="CollisionShape3D" parent="Cube001/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, -6.69388e-10, 7.45058e-09, 1.89175e-09, 1, -0.0220561, -5.99191, -0.0675125)
+
+[node name="CollisionShape3D" parent="Cube002/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, -4.47035e-08, 1, -7.85803e-10, 7.45058e-09, 2.82307e-09, 0.999999, -0.020083, -5.45603, -0.0614777)
+
+[node name="CollisionShape3D" parent="Cube003/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, -4.47035e-08, 1, -7.85803e-10, 7.45058e-09, 2.82307e-09, 0.999999, -0.0414052, -11.2488, -0.126743)
+
+[node name="CollisionShape3D" parent="Cube004/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, -6.69388e-10, 7.45058e-09, 1.89175e-09, 1, -0.0345378, -9.38305, -0.105721)
+
+[node name="CollisionShape3D" parent="Cube005/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, -6.69388e-10, 7.45058e-09, 1.89175e-09, 1, -0.0384569, -10.4478, -0.117718)
+
+[node name="CollisionShape3D" parent="Cube006/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, -6.69388e-10, 7.45058e-09, 1.89175e-09, 1, -0.0350562, -9.52388, -0.107311)
+
+[node name="CollisionShape3D" parent="Cube007/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, -6.69388e-10, 7.45058e-09, 1.89175e-09, 1, -0.0431332, -11.7182, -0.132032)

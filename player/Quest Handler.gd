@@ -15,6 +15,7 @@ func complete_quest(name):
 		if quest.quest_name == name:
 			if quest.completed == false:
 				next_quest(quest.next_quest)
+				all_quests.erase(quest)
 			quest.completed = true
 			return true
 	return false

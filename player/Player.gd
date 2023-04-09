@@ -20,6 +20,7 @@ var health = max_health
 # player dependent instances
 var camera
 var cursor
+var hud
 
 @onready var inventory = $Inventory
 @onready var inventory_hud = $"Inventory HUD"
@@ -68,11 +69,13 @@ func _process(delta):
 		if inventory_open:
 			inventory_hud.visible = false
 			inventory_open = false
+			show_hud()
 		else:
 			inventory_hud.visible = true
 			inventory_open = true
+			hide_hud()
+			
 		OS.delay_msec(200)
-		
 
 func look_towards_cursor():
 	var ray_origin = Vector3.ZERO
@@ -89,10 +92,6 @@ func look_towards_cursor():
 	params.exclude = [self]
 	var result = space_state.intersect_ray(params)
 	
-	# ray_origin = camera.project_ray_origin(mouse_position)
-	# ray_end = ray_origin + camera.project_ray_normal(mouse_position) * 2000
-	#var result = space_state.intersect_ray(ray_origin, ray_end, [self])
-	
 	if not result.is_empty():
 		var pos = result.position
 		pos = Vector3(pos.x, self.position.y, pos.z)
@@ -104,5 +103,15 @@ func look_towards_cursor():
 			print("GAGAGAGAG")
 
 func instance_hud():
-	var hud = load("res://assets/hud/HUD.tscn")
-	add_child(hud.instantiate())
+	add_child(load("res://assets/hud/HUD.tscn").instantiate())
+	hud = get_node("HUD")
+
+func hide_hud():
+	hud.visible = false
+	for child in hud.get_node("Health").get_children():
+		child.visible = false
+	
+func show_hud():
+	hud.visible = true
+	for child in hud.get_node("Health").get_children():
+		child.visible = true
