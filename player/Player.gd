@@ -42,15 +42,15 @@ func _ready():
 	print(inventory.inventory)
 	
 func update_animation():
-	print("Update animation called")
-	print("Velocity:", velocity)
-	print("Speed:", speed)
-	print("Velocity:", velocity)
-	print("Velocity Length:", velocity.length())
+	#print("Update animation called")
+	#print("Velocity:", velocity)
+	#print("Speed:", speed)
+	#print("Velocity:", velocity)
+	#print("Velocity Length:", velocity.length())
 	var blend_position = velocity.length() / speed
-	print("Blend position:", blend_position)
-	print("Velocity:", velocity)
-	print("Speed:", speed)
+	#print("Blend position:", blend_position)
+	#print("Velocity:", velocity)
+	#print("Speed:", speed)
 	anim_tree.set("parameters/BlendSpace1D/blend_position", blend_position)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
