@@ -1,5 +1,7 @@
 extends CharacterBody3D
 
+@onready var anim_tree = $AnimationTree
+
 # class_name Player
 @onready var player = $"."
 
@@ -33,10 +35,23 @@ var game_stage = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	anim_tree.active = true
 	camera = get_parent().get_node("Player Camera3D")
 	instance_hud()
 	inventory_hud.visible = false
 	print(inventory.inventory)
+	
+func update_animation():
+	print("Update animation called")
+	print("Velocity:", velocity)
+	print("Speed:", speed)
+	print("Velocity:", velocity)
+	print("Velocity Length:", velocity.length())
+	var blend_position = velocity.length() / speed
+	print("Blend position:", blend_position)
+	print("Velocity:", velocity)
+	print("Speed:", speed)
+	anim_tree.set("parameters/BlendSpace1D/blend_position", blend_position)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -67,6 +82,8 @@ func _process(delta):
 	move_and_slide()
 	
 	look_towards_cursor()
+	
+	update_animation()
 	
 	if Input.is_action_pressed("inventory"):
 		if inventory_open:

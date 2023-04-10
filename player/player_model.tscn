@@ -1,5 +1,5 @@
-[gd_scene format=3 uid="uid://bw5lc526k7kji"]
+[gd_scene load_steps=2 format=3 uid="uid://bw5lc526k7kji"]
 
-[node name="player model"]
+[ext_resource type="PackedScene" uid="uid://dt5jn5n7y40if" path="res://player/Model/Player Model.glb" id="1_hjaw8"]
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="1"]
+[node name="Player Model" instance=ExtResource("1_hjaw8")]
