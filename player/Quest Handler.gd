@@ -1,45 +1,43 @@
 extends Node
 
-var all_quests = []
+var current_quests = []
 
-# Called when the node enters the scene tree for the first time.
+var all_quests = preload("res://player/quests/All Quests.tscn").instantiate()
+
 func _ready():
-	pass # Replace with function body.
+	add_child(all_quests)
+	all_quests = get_node("All Quests").get_children()
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	if all_quests.size() > 0:
-		display(all_quests[0].quest_name, all_quests[0].quest_description)
-	else:
-		display("gAY", "FSDsfdsdfsfd")
-		
+func get_quest(ID: int):
+	for quest in all_quests:
+		if quest.quest_id == ID:
+			return quest
+
+func add_quest(ID):
+	print("QUEST ADDED")
+	current_quests.append(get_quest(ID))
+
+func get_quest_index(ID):
+	var index = 0
+	for quest in current_quests:
+		if quest.quest_id == ID:
+			return index
+		index += 1
+
+func remove_quest(ID):
+	print("QUEST REMOVED")
+	var index = get_quest_index(ID)
+	current_quests.pop_at(index)
+
+func complete_quest(ID):
+	remove_quest(ID)
+	var player = get_parent()
 	
-func complete_quest(name):
-	if all_quests.size() > 0:
-		for quest in all_quests:
-			if quest == null:
-				all_quests.erase(null)
-			if quest.quest_name == name:
-				if quest.completed == false:
-					if next_quest == null:
-						pass
-					else:
-						next_quest(quest.next_quest)
-					all_quests.erase(quest)
-					
-				if quest.next_events[0] != null:
-					var events = get_parent().get_parent().get_node("Events")
-					for quest_event in quest.next_events:
-						for child in events.get_children():
-							print(child)
-							if child.event_name == quest_event:
-								child.out_function()
-
-				quest.completed = true
-
-func next_quest(quest_obj):
-	all_quests.append(quest_obj)
-
-func display(name, description):
-	var hud = get_parent().player.get_node("HUD")
-	hud.get_node("Label").text = "Quest: " + name + " - " + description
+	for event_id in get_quest(ID).next_events:
+		var events = player.get_parent().get_node("Events")
+		for event in events.get_children():
+			if event_id == event.event_id:
+				if event.trigger == event.TRIGGER.MANUAL:
+					event.do_result()
+				else:
+					event.active = true

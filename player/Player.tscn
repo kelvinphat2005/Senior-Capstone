@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://bkt5mnyryllmv"]
+[gd_scene load_steps=17 format=3 uid="uid://dqdyalu51xagc"]
 
 [ext_resource type="Script" path="res://Player/Player.gd" id="1_lq0nv"]
 [ext_resource type="Script" path="res://Player/Inventory.gd" id="2_rioom"]

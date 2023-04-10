@@ -2,21 +2,11 @@ extends Node
 
 class_name Quest
 
-var quest_name
-var quest_description
-var completed = false # if quest is completed
-var next_quest = null # instance a new quest and add it here -- this is the next quest in the chain once
-var next_events = [null] # events to activate once completed
+var quest_name : String
+var quest_id : int
+var quest_description : String
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+var completed := false # if quest is completed
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-	
-
-func format():
-	print("Quest Name: {name}, Completed {completed}, next_quest{quest}".format({"name":quest_name,"completed":completed,"quest": next_quest}))
+var next_events := [null] # events to activate once completed
 

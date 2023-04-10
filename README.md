@@ -21,6 +21,8 @@ Item Logo pt2: Go to Holding.gd `(res://assets/HUD/Holding.gd)` and add item to 
 
 Create a `Node` with the name `Items`
 
+Give that node `Items.gd`
+
 Make the item you want the child of that Node
 
 ## Creating Quest
@@ -42,3 +44,5 @@ Add quest to quest handlers' all_quest list:
 ```
 player.quest_handler.all_quests.append(quest)
 ```
+
+Currently, a place holder quest needs to be put in quest.next_quest or the game will crash!
