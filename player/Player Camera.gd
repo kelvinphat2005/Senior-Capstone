@@ -41,7 +41,15 @@ func _ready():
 
 func _process(delta):
 	player_pos = player.position
-	position = (Vector3(player_pos.x,8,player_pos.z+z_offset+3))
+	
+	if player.inventory_open:
+		inventory_camera()
+	else:
+		get_node("Inventory Background").visible = false
+		get_node("Item Preview").visible = false
+		get_node("DirectionalLight3D").visible = false
+		position = (Vector3(player_pos.x,8,player_pos.z+z_offset+3))
+		
 	'''player_pos = player.position
 	# print(self.position)
 	if READY:
@@ -77,3 +85,9 @@ func _process(delta):
 				in_radius_z = true
 			elif player.position.z - origin.z > outer_cam_thresh * -1 and player.position.z < inner_cam_thresh * -1:
 				in_radius_z = true'''
+
+func inventory_camera():
+	position = Vector3(0, 1000, 0)
+	get_node("Inventory Background").visible = true
+	get_node("Item Preview").visible = true
+	get_node("DirectionalLight3D").visible = true

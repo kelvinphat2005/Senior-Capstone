@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://b5o0tux6g5gsh"]
+[gd_scene load_steps=3 format=3 uid="uid://b5o0tux6g5gsh"]
 
 [ext_resource type="Script" path="res://assets/HUD/Inventory HUD.gd" id="1_6f8xq"]
 [ext_resource type="Script" path="res://assets/HUD/VBoxContainer.gd" id="1_stoss"]
-[ext_resource type="Texture2D" uid="uid://dn88u2q2cxw7c" path="res://assets/hud/HUD_rev_1.png" id="2_tctks"]
 
 [node name="Inventory HUD" type="Control"]
 layout_mode = 3
@@ -12,11 +11,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_6f8xq")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(320, 180)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_tctks")
 
 [node name="Item Name" type="Label" parent="."]
 modulate = Color(0, 0, 0, 1)

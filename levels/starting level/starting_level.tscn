@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://b04urfclklc5y"]
+[gd_scene load_steps=21 format=3 uid="uid://b04urfclklc5y"]
 
 [ext_resource type="PackedScene" uid="uid://dqdyalu51xagc" path="res://player/Player.tscn" id="1_g3a4n"]
 [ext_resource type="Script" path="res://levels/starting level/starting_level.gd" id="1_pnmbe"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://dsymegh3car3p" path="res://assets/objects/door/door.tscn" id="15_a531b"]
 [ext_resource type="PackedScene" uid="uid://0bcd3xsrrj84" path="res://assets/objects/table/table.tscn" id="16_ek2ee"]
 [ext_resource type="PackedScene" uid="uid://dulcw4xud7iqd" path="res://assets/objects/chair/chair.tscn" id="17_pgbsv"]
+[ext_resource type="PackedScene" uid="uid://c105rc2j7ot0h" path="res://assets/items/bandage/bandage.tscn" id="18_1ugfa"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ngsti"]
 
@@ -58,6 +59,9 @@ script = ExtResource("5_1ag7w")
 [node name="Items" type="Node" parent="."]
 script = ExtResource("2_1poi5")
 
+[node name="001 bandage" parent="Items" instance=ExtResource("18_1ugfa")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+
 [node name="cup" parent="Items" instance=ExtResource("9_mq4ct")]
 transform = Transform3D(0.0487113, 0, -0.0873339, 0, 0.1, 0, 0.0873339, 0, 0.0487113, -4.312, 1.83332, 0.0822727)
 
@@ -65,7 +69,7 @@ transform = Transform3D(0.0487113, 0, -0.0873339, 0, 0.1, 0, 0.0873339, 0, 0.048
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.607379, 1.70593, 5.14618)
 
 [node name="Player Camera3D" parent="." instance=ExtResource("2_sjgax")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.201331, -0.0644064, 0.100099)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.201331, 12.9356, 0.100099)
 fov = 45.0
 script = ExtResource("3_vih58")
 

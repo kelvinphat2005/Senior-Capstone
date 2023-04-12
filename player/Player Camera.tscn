@@ -1,7 +1,25 @@
-[gd_scene load_steps=2 format=3 uid="uid://cyc0qe562iuu7"]
+[gd_scene load_steps=4 format=3 uid="uid://cyc0qe562iuu7"]
 
 [ext_resource type="Script" path="res://Player/Player Camera.gd" id="1_pi3p1"]
+[ext_resource type="PackedScene" uid="uid://nrrbpd1eh023" path="res://player/inventory/Inventory Background.tscn" id="2_x3217"]
+[ext_resource type="Script" path="res://player/Item Preview.gd" id="3_2404p"]
 
 [node name="Player Camera3D" type="Camera3D"]
 fov = 35.0
 script = ExtResource("1_pi3p1")
+
+[node name="Inventory Background" parent="." instance=ExtResource("2_x3217")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4.75006)
+visible = false
+
+[node name="Item Preview" type="Node3D" parent="."]
+transform = Transform3D(3.5, 0, 0, 0, 3.5, 0, 0, 0, 3.5, -1.25, -0.25, -3.5)
+visible = false
+script = ExtResource("3_2404p")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.25, 1, -0.5)
+visible = false
+light_indirect_energy = 16.0
+
+[editable path="Inventory Background"]

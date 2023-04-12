@@ -133,16 +133,16 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_byfst")
 
-[sub_resource type="Animation" id="Animation_e6r2e"]
-resource_name = "Door_Group"
+[sub_resource type="Animation" id="Animation_ofdme"]
+resource_name = "Door"
 length = 0.0833333
 
 [sub_resource type="Animation" id="Animation_vv0bc"]
 resource_name = "DoorFrame"
 length = 0.0833333
 
-[sub_resource type="Animation" id="Animation_ofdme"]
-resource_name = "Door"
+[sub_resource type="Animation" id="Animation_e6r2e"]
+resource_name = "Door_Group"
 length = 0.0833333
 
 [sub_resource type="Animation" id="Animation_dgqlq"]

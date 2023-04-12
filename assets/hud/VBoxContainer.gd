@@ -3,6 +3,7 @@ extends VBoxContainer
 @onready var player = get_parent().get_parent().get_parent().get_parent()
 
 var finished_loading_slots = false
+var selected_item = null
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -34,4 +35,5 @@ func load_slots():
 func select_item(item):
 	var inventory = player.inventory
 	inventory.equip_item(item)
+	selected_item = item
 	print("inv select", item)

@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://nrrbpd1eh023"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_as0hs"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="QuadMesh" id="QuadMesh_chbm7"]
+material = SubResource("StandardMaterial3D_as0hs")
+size = Vector2(12, 8)
+
+[node name="Inventory Background" type="Node3D"]
+
+[node name="Plane" type="MeshInstance3D" parent="."]
+mesh = SubResource("QuadMesh_chbm7")
