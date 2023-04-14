@@ -41,3 +41,4 @@ func trigger(event):
 	elif event.trigger == event.TRIGGER.IN_INVENTORY:
 		event.do_result()
 		event.triggered = true
+		

@@ -24,6 +24,7 @@ enum RESULT {
 	QUEST_REMOVE,
 	QUEST_COMPLETE,
 	FUNCTION,
+	CHANGE_LEVEL,
 }
 
 # Called when the node enters the scene tree for the first time.
@@ -52,7 +53,12 @@ func do_result():
 			
 		elif i == RESULT.FUNCTION:
 			result_function()
+			
+		elif i == RESULT.CHANGE_LEVEL:
+			change_level()
 
 func result_function():
 	pass
 	
+func change_level():
+	pass
