@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://dqdyalu51xagc"]
+[gd_scene load_steps=25 format=3 uid="uid://dqdyalu51xagc"]
 
 [ext_resource type="Script" path="res://Player/Player.gd" id="1_lq0nv"]
 [ext_resource type="Script" path="res://Player/Inventory.gd" id="2_rioom"]
@@ -10,6 +10,9 @@
 [sub_resource type="CapsuleShape3D" id="1"]
 radius = 0.25
 height = 2.374
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_fp8b7"]
+height = 0.2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dc3dn"]
 resource_name = "STCR_armor"
@@ -1651,7 +1654,7 @@ blend_point_1/pos = 1.0
 min_space = 0.0
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_aqsc7"]
-graph_offset = Vector2(-774.576, 0)
+graph_offset = Vector2(-149.758, 29.8926)
 nodes/BlendSpace1D/node = SubResource("AnimationNodeBlendSpace1D_c0agh")
 nodes/BlendSpace1D/position = Vector2(-59.4076, 146.41)
 node_connections = [&"output", 0, &"BlendSpace1D"]
@@ -1671,8 +1674,12 @@ script = ExtResource("2_rioom")
 script = ExtResource("4_m7iqy")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -1, 8.74227e-08, 0, -8.74227e-08, -1, 0, -0.37627, 0)
+transform = Transform3D(1, 0, 0, 0, -1, 8.74227e-08, 0, -8.74227e-08, -1, 0, -0.1887, 0)
 shape = SubResource("1")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -1, 8.74227e-08, 0, -8.74227e-08, -1, 0, -1.25665, 0)
+shape = SubResource("CylinderShape3D_fp8b7")
 
 [node name="RayCast3D" type="RayCast3D" parent="."]
 exclude_parent = false

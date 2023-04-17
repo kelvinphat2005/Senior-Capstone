@@ -96,6 +96,8 @@ func _process(delta):
 			hide_hud()
 			
 		OS.delay_msec(200)
+	
+	
 
 func look_towards_cursor():
 	var ray_origin = Vector3.ZERO
@@ -121,6 +123,7 @@ func look_towards_cursor():
 		
 		if collider.get_class() == "Enemy":
 			print("GAGAGAGAG")
+	
 
 func instance_hud():
 	add_child(load("res://assets/hud/HUD.tscn").instantiate())

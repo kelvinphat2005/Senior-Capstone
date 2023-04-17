@@ -27,7 +27,8 @@ func _process(delta):
 					n.queue_free()
 			if item_loaded == false:
 				print("gagagag")
-				add_child(items[selected_item.id].instantiate())
+				var it = items[selected_item.id]
+				add_child(it.instantiate())
 				previous_item = selected_item
 				item_loaded = true
 			else:

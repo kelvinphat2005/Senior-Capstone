@@ -10,10 +10,9 @@ script = ExtResource("1_pi3p1")
 
 [node name="Inventory Background" parent="." instance=ExtResource("2_x3217")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4.75006)
-visible = false
 
 [node name="Item Preview" type="Node3D" parent="."]
-transform = Transform3D(3.5, 0, 0, 0, 3.5, 0, 0, 0, 3.5, -1.25, -0.25, -3.5)
+transform = Transform3D(3.5, 0, 0, 0, 3.03109, -1.75, 0, 1.75, 3.03109, -1.15, -0.25, -3.5)
 visible = false
 script = ExtResource("3_2404p")
 
