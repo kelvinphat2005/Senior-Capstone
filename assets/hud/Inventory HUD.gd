@@ -9,6 +9,8 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	PlayerVariables.inventory_hud = self
+	
 	var selected_item = vbox.selected_item
 	if selected_item != null:
 		change_item_name(selected_item.item_name)

@@ -7,6 +7,7 @@ var current_quests = []
 func _process(delta):
 	for event in get_children():
 		if event.active:
+			
 			if has_required_item(event):
 				if event.triggered == false:
 					trigger(event)
@@ -36,9 +37,15 @@ func trigger(event):
 			if Input.is_action_pressed("interact"):
 				print("Item interacted with")
 				event.do_result()
-				event.triggered = true
+				trig_check(event)
+				await get_tree().create_timer(1).timeout
 						
 	elif event.trigger == event.TRIGGER.IN_INVENTORY:
 		event.do_result()
-		event.triggered = true
+		trig_check(event)
 		
+func trig_check(event):
+	if event.repeatable:
+		event.triggered = false
+	else:
+		event.triggered = true

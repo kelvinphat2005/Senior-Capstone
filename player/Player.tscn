@@ -1,11 +1,13 @@
-[gd_scene load_steps=25 format=3 uid="uid://dqdyalu51xagc"]
+[gd_scene load_steps=27 format=3 uid="uid://dqdyalu51xagc"]
 
 [ext_resource type="Script" path="res://Player/Player.gd" id="1_lq0nv"]
+[ext_resource type="PackedScene" uid="uid://ojsropdeyyma" path="res://assets/hud/HUD.tscn" id="2_1ciox"]
 [ext_resource type="Script" path="res://Player/Inventory.gd" id="2_rioom"]
 [ext_resource type="Script" path="res://player/Quest Handler.gd" id="4_m7iqy"]
 [ext_resource type="Texture2D" uid="uid://b6su5es46vl2j" path="res://player/Model/Player Model_STCR_armor_plate.png" id="5_1yvhe"]
 [ext_resource type="PackedScene" uid="uid://b5o0tux6g5gsh" path="res://assets/hud/Inventory HUD.tscn" id="5_5y8y7"]
 [ext_resource type="Texture2D" uid="uid://drisk6s36vj7w" path="res://player/Model/Player Model_STCR_body.png" id="6_vcvo2"]
+[ext_resource type="Script" path="res://player/PlayerVariables.gd" id="8_tbapl"]
 
 [sub_resource type="CapsuleShape3D" id="1"]
 radius = 0.25
@@ -1654,7 +1656,6 @@ blend_point_1/pos = 1.0
 min_space = 0.0
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_aqsc7"]
-graph_offset = Vector2(-149.758, 29.8926)
 nodes/BlendSpace1D/node = SubResource("AnimationNodeBlendSpace1D_c0agh")
 nodes/BlendSpace1D/position = Vector2(-59.4076, 146.41)
 node_connections = [&"output", 0, &"BlendSpace1D"]
@@ -1664,6 +1665,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.344028, 1.70593, 0)
 collision_layer = 3
 collision_mask = 3
 script = ExtResource("1_lq0nv")
+
+[node name="PlayerVariables" type="Node" parent="."]
+script = ExtResource("8_tbapl")
+
+[node name="HUD" parent="." instance=ExtResource("2_1ciox")]
 
 [node name="Inventory HUD" parent="." instance=ExtResource("5_5y8y7")]
 
@@ -2063,3 +2069,6 @@ tree_root = SubResource("AnimationNodeBlendTree_aqsc7")
 anim_player = NodePath("../AnimationPlayer")
 active = true
 parameters/BlendSpace1D/blend_position = 0.0
+
+[editable path="HUD"]
+[editable path="Inventory HUD"]

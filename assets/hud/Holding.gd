@@ -18,18 +18,22 @@ var player_in_scene = false
 # HUD is instantiated by the Player node
 # so the parent of parent is player <-- wow
 func _ready():
-	player = get_parent().get_parent()
-	inventory = player.get_node("Inventory")
+	
+	
 	print("HUD.Holding READY")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	var holding = inventory.equipped_item
+	player = get_parent().get_parent()
+	inventory = PlayerVariables.inventory
+	# print("h", inventory)
 	
-	if holding == null:
+	var equipped_item = PlayerVariables.equipped_item
+	
+	if equipped_item == null:
 		set_texture(all_item_logos["fist"])
 	else:
-		set_texture(all_item_logos[holding.item_name])
+		set_texture(all_item_logos[equipped_item.item_name])
 	
 	if Input.is_action_pressed("jump"):
 		set_texture(test)

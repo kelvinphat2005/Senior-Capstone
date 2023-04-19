@@ -14,7 +14,8 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	PlayerVariables.inventory = self
+	PlayerVariables.equipped_item = equipped_item
 
 func print_inventory():
 	print("Inventory: ", inventory)

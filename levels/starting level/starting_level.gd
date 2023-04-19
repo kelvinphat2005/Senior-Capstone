@@ -12,5 +12,5 @@ func _ready():
 func _process(delta):
 	if Input.is_action_just_pressed("debug_1"):
 		print("adsasdads")
-		get_tree().change_scene_to_file("res://levels/test level/Test Level.tscn")
+		
 '''

@@ -15,6 +15,11 @@ run/main_scene="res://levels/starting level/starting_level.tscn"
 config/features=PackedStringArray("4.0")
 config/icon="res://icon.png"
 
+[autoload]
+
+Global="*res://Global.gd"
+PlayerVariables="*res://player/PlayerVariables.gd"
+
 [display]
 
 window/size/viewport_width=640

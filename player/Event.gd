@@ -5,6 +5,7 @@ class_name Event
 var event_id : int
 var triggered := false
 var active := false
+var repeatable := false
 
 var result_quest := [null] # quest IDs
 var completed_quest = null
