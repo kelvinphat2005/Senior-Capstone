@@ -1,11 +1,13 @@
-[gd_scene load_steps=24 format=3 uid="uid://b04urfclklc5y"]
+[gd_scene load_steps=26 format=3 uid="uid://b04urfclklc5y"]
 
 [ext_resource type="PackedScene" uid="uid://dqdyalu51xagc" path="res://player/Player.tscn" id="1_g3a4n"]
 [ext_resource type="Script" path="res://levels/starting level/starting_level.gd" id="1_pnmbe"]
 [ext_resource type="Script" path="res://levels/Items.gd" id="2_1poi5"]
 [ext_resource type="Script" path="res://levels/Event Manager.gd" id="2_dc1dc"]
+[ext_resource type="Script" path="res://levels/Spawns.gd" id="2_nt8u5"]
 [ext_resource type="PackedScene" uid="uid://cyc0qe562iuu7" path="res://player/Player Camera.tscn" id="2_sjgax"]
 [ext_resource type="Script" path="res://levels/starting level/1 Retrieve Cup.gd" id="3_gkbn4"]
+[ext_resource type="Script" path="res://levels/Spawnpoint.gd" id="3_q4e81"]
 [ext_resource type="Script" path="res://player/Player Camera.gd" id="3_vih58"]
 [ext_resource type="Script" path="res://levels/starting level/2 Fill Cup.gd" id="4_jdbnq"]
 [ext_resource type="Script" path="res://levels/starting level/3 Fog Clear.gd" id="5_1ag7w"]
@@ -44,6 +46,13 @@ size = Vector3(15, 10, 0.25)
 
 [node name="starting level" type="Node"]
 script = ExtResource("1_pnmbe")
+
+[node name="Spawns" type="Node" parent="."]
+script = ExtResource("2_nt8u5")
+
+[node name="Door" type="Node3D" parent="Spawns"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.63754, 1.05683, 3.25911)
+script = ExtResource("3_q4e81")
 
 [node name="Events" type="Node" parent="."]
 script = ExtResource("2_dc1dc")

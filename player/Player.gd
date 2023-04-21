@@ -37,9 +37,12 @@ var game_stage = 0
 func _ready():
 	anim_tree.active = true
 	camera = get_parent().get_node("Player Camera3D")
-	instance_hud()
 	inventory_hud.visible = false
 	print(inventory.inventory)
+	
+	if get_parent().has_node("Spawns"):
+		var spawns = get_parent().get_node("Spawns")
+		spawns.go_to_spawn()
 	
 func update_animation():
 	#print("Update animation called")
