@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://cb0fu3c32an1g"]
+
+[ext_resource type="PackedScene" uid="uid://dqdyalu51xagc" path="res://player/Player.tscn" id="1_a1ue1"]
+[ext_resource type="PackedScene" uid="uid://b7cf66eys8yff" path="res://levels/apartment hallway/apartment_hallway.tscn" id="2_8l4no"]
+[ext_resource type="PackedScene" uid="uid://cyc0qe562iuu7" path="res://player/Player Camera.tscn" id="3_ycdge"]
+
+[sub_resource type="Environment" id="Environment_tp42n"]
+background_mode = 1
+background_energy_multiplier = 0.0
+ambient_light_source = 1
+reflected_light_source = 1
+ssil_radius = 10.05
+ssil_intensity = 1.36
+glow_normalized = true
+glow_intensity = 0.0
+volumetric_fog_enabled = true
+volumetric_fog_albedo = Color(0.803922, 0.815686, 0.827451, 1)
+volumetric_fog_emission = Color(0.662745, 0.662745, 0.662745, 1)
+volumetric_fog_ambient_inject = 0.53
+
+[node name="apartment hallway playable" type="Node"]
+
+[node name="Player" parent="." instance=ExtResource("1_a1ue1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.34403, 1.70593, 0)
+
+[node name="Player Camera3D" parent="." instance=ExtResource("3_ycdge")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 25)
+
+[node name="apartment hallway" parent="." instance=ExtResource("2_8l4no")]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_tp42n")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 8, 0)
+light_volumetric_fog_energy = 8.0
+light_size = 1.0
+light_specular = 16.0

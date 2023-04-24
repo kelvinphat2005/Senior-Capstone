@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://b7cf66eys8yff"]
+
+[ext_resource type="PackedScene" uid="uid://ct3q47635nb18" path="res://levels/apartment hallway/apartment hallway.glb" id="1_0r1yo"]
+[ext_resource type="PackedScene" uid="uid://dsymegh3car3p" path="res://assets/objects/door/door.tscn" id="2_ajtq1"]
+
+[node name="apartment hallway" instance=ExtResource("1_0r1yo")]
+
+[node name="door" parent="." index="48" instance=ExtResource("2_ajtq1")]
+transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, 16.6437, 9.53674e-07, -2.45664)
+
+[node name="door2" parent="." index="49" instance=ExtResource("2_ajtq1")]
+transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, 36.6437, 9.53674e-07, -2.45664)
+
+[node name="door3" parent="." index="50" instance=ExtResource("2_ajtq1")]
+transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, 56.6437, 9.53674e-07, -2.45664)
