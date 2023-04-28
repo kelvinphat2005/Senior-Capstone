@@ -5,11 +5,13 @@
 
 [node name="apartment hallway" instance=ExtResource("1_0r1yo")]
 
-[node name="door" parent="." index="48" instance=ExtResource("2_ajtq1")]
+[node name="MultiMeshInstance3D" type="MultiMeshInstance3D" parent="." index="0"]
+
+[node name="door" parent="." index="49" instance=ExtResource("2_ajtq1")]
 transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, 16.6437, 9.53674e-07, -2.45664)
 
-[node name="door2" parent="." index="49" instance=ExtResource("2_ajtq1")]
+[node name="door2" parent="." index="50" instance=ExtResource("2_ajtq1")]
 transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, 36.6437, 9.53674e-07, -2.45664)
 
-[node name="door3" parent="." index="50" instance=ExtResource("2_ajtq1")]
+[node name="door3" parent="." index="51" instance=ExtResource("2_ajtq1")]
 transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, 56.6437, 9.53674e-07, -2.45664)

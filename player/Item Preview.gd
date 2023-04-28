@@ -18,6 +18,7 @@ func _ready():
 
 func _process(delta):
 	if preview_ready:
+		rotate(Vector3(0, 1, 0), 0.05)
 		var selected_item = player.get_node("Inventory HUD").vbox.selected_item
 		if selected_item != null:
 			if previous_item != selected_item:

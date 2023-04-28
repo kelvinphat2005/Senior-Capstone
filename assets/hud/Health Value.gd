@@ -20,5 +20,6 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	PlayerVariables.hud = get_parent().get_parent()
 	if player_in_scene:
 		text = str(player.health)
