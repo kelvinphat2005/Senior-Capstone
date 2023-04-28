@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://b04urfclklc5y"]
+[gd_scene load_steps=28 format=3 uid="uid://b04urfclklc5y"]
 
 [ext_resource type="PackedScene" uid="uid://dqdyalu51xagc" path="res://player/Player.tscn" id="1_g3a4n"]
 [ext_resource type="Script" path="res://levels/starting level/starting_level.gd" id="1_pnmbe"]
@@ -17,10 +17,12 @@
 [ext_resource type="PackedScene" uid="uid://cah5ffevt8hj4" path="res://assets/objects/counter/counter_2.tscn" id="7_vmuv6"]
 [ext_resource type="PackedScene" uid="uid://dc8xh1vlsd4ej" path="res://assets/objects/counter/counter.tscn" id="8_44vuk"]
 [ext_resource type="PackedScene" uid="uid://c6otoq5honbj7" path="res://assets/items/cup/cup.tscn" id="9_mq4ct"]
+[ext_resource type="PackedScene" uid="uid://6n5ns7dx6xis" path="res://assets/objects/grass/grass_2b.tscn" id="13_sa2i5"]
 [ext_resource type="PackedScene" uid="uid://dsymegh3car3p" path="res://assets/objects/door/door.tscn" id="15_a531b"]
 [ext_resource type="PackedScene" uid="uid://0bcd3xsrrj84" path="res://assets/objects/table/table.tscn" id="16_ek2ee"]
 [ext_resource type="PackedScene" uid="uid://dulcw4xud7iqd" path="res://assets/objects/chair/chair.tscn" id="17_pgbsv"]
 [ext_resource type="PackedScene" uid="uid://c105rc2j7ot0h" path="res://assets/items/bandage/bandage.tscn" id="18_1ugfa"]
+[ext_resource type="PackedScene" uid="uid://dsd32dgr35qq" path="res://assets/objects/grass/grass_1b.tscn" id="22_4v825"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ngsti"]
 
@@ -89,6 +91,50 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
 
 [node name="cup" parent="Items" instance=ExtResource("9_mq4ct")]
 transform = Transform3D(0.0487113, 0, -0.0873339, 0, 0.1, 0, 0.0873339, 0, 0.0487113, -4.312, 1.83332, 0.0822727)
+
+[node name="Greenery" type="Node" parent="."]
+
+[node name="grass 1" parent="Greenery" instance=ExtResource("22_4v825")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 2.96533, 0.431631, 1.00562)
+
+[node name="grass 2" parent="Greenery" instance=ExtResource("22_4v825")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -2.30798, 0.431631, 2.07651)
+
+[node name="grass 3" parent="Greenery" instance=ExtResource("22_4v825")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -1.25478, 0.431631, -3.51354)
+
+[node name="grass 4" parent="Greenery" instance=ExtResource("22_4v825")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0.169267, 0.431631, 0.451771)
+
+[node name="grass 5" parent="Greenery" instance=ExtResource("22_4v825")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 6.38363, 0.431631, 2.93876)
+
+[node name="grass 6" parent="Greenery" instance=ExtResource("22_4v825")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 2.78279, 0.431631, 5.07014)
+
+[node name="grass 7" parent="Greenery" instance=ExtResource("22_4v825")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -3.85905, 0.431631, 3.44645)
+
+[node name="grass 8" parent="Greenery" instance=ExtResource("22_4v825")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -2.70737, 0.431631, 5.90437)
+
+[node name="grass 9" parent="Greenery" instance=ExtResource("22_4v825")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -3.35526, 0.431631, -5.62057)
+
+[node name="grass 10" parent="Greenery" instance=ExtResource("13_sa2i5")]
+transform = Transform3D(4.5, 0, 0, 0, 4.5, 0, 0, 0, 4.5, 1.25057, 0.432, 3.92434)
+
+[node name="grass 11" parent="Greenery" instance=ExtResource("22_4v825")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 6.66296, 0.431631, 5.90437)
+
+[node name="grass 12" parent="Greenery" instance=ExtResource("22_4v825")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 4.88142, 0.431631, 2.39403)
+
+[node name="grass 13" parent="Greenery" instance=ExtResource("22_4v825")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -2.68881, 0.431631, -2.19334)
+
+[node name="grass 14" parent="Greenery" instance=ExtResource("22_4v825")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -1.11591, 0.431631, 5.21249)
 
 [node name="Player" parent="." instance=ExtResource("1_g3a4n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.607379, 1.70593, 5.14618)
