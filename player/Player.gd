@@ -8,7 +8,7 @@ extends CharacterBody3D
 # Declare member variables here. Examples:
 @export var speed = 4.0 # max speed
 @export var jump_impuslse = 20.0
-@export var gravity = 75.0
+@export var gravity = 1.0
 @export var accel = 0.8
 
 var player_x = 0
@@ -61,6 +61,9 @@ func _process(delta):
 	# print(self.position)
 	
 	var direction = Vector3.ZERO
+	
+	if PlayerVariables.hud:
+		hud = PlayerVariables.hud
 	
 	if Input.is_action_pressed("move_right"):
 		direction.x += 1
@@ -130,7 +133,8 @@ func look_towards_cursor():
 
 func instance_hud():
 	add_child(load("res://assets/hud/HUD.tscn").instantiate())
-	hud = get_node("HUD")
+	var temp_hud = get_node("HUD")
+	PlayerVariables.hud = temp_hud
 
 func hide_hud():
 	hud.visible = false
