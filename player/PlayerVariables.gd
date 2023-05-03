@@ -1,8 +1,8 @@
 extends Node
 
-var inventory
+var inventory = []
 var inventory_hud
-var equipped_item
+var equipped_item = null
 
 var quest_handler
 var all_quests
@@ -17,4 +17,4 @@ func _ready():
 	pass # Replace with function body.
 
 func _process(delta):
-	hud = $"res://assets/hud/HUD.tscn"
+	pass

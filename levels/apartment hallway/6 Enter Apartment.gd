@@ -10,5 +10,5 @@ func _ready():
 
 func result_function():
 	PlayerVariables.level_spawn = 1
-	get_tree().change_scene_to_file("res://levels/reception/reception_playable.tscn")
+	get_tree().change_scene_to_file("res://levels/starting level/starting_level.tscn")
 

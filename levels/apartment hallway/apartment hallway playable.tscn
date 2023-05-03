@@ -1,9 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://cb0fu3c32an1g"]
+[gd_scene load_steps=13 format=3 uid="uid://cb0fu3c32an1g"]
 
 [ext_resource type="PackedScene" uid="uid://dqdyalu51xagc" path="res://player/Player.tscn" id="1_a1ue1"]
 [ext_resource type="Script" path="res://levels/Spawns.gd" id="1_i3aje"]
 [ext_resource type="PackedScene" uid="uid://b7cf66eys8yff" path="res://levels/apartment hallway/apartment_hallway.tscn" id="2_8l4no"]
 [ext_resource type="Script" path="res://levels/Spawnpoint.gd" id="2_xxtdg"]
+[ext_resource type="Script" path="res://levels/apartment hallway/6 Enter Apartment.gd" id="3_woah8"]
 [ext_resource type="PackedScene" uid="uid://cyc0qe562iuu7" path="res://player/Player Camera.tscn" id="3_ycdge"]
 [ext_resource type="Script" path="res://levels/Event Manager.gd" id="6_lgsjh"]
 [ext_resource type="Script" path="res://levels/apartment hallway/5 Exit Apartment.gd" id="7_t2ato"]
@@ -32,7 +33,7 @@ volumetric_fog_ambient_inject = 0.53
 size = Vector3(1, 5, 5)
 
 [sub_resource type="FogMaterial" id="FogMaterial_n0oxq"]
-edge_fade = 0.4
+edge_fade = 1.25533
 
 [node name="apartment hallway playable" type="Node"]
 
@@ -53,7 +54,7 @@ shape = SubResource("BoxShape3D_0dxhu")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60.7947, 0, 0)
 collision_layer = 4
 collision_mask = 2
-script = ExtResource("7_t2ato")
+script = ExtResource("3_woah8")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Events/6 Enter Apartment"]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -44.151, 0.24119, -1.83163)
@@ -97,7 +98,7 @@ shape = SubResource("BoxShape3D_bvoc6")
 
 [node name="FogVolume" type="FogVolume" parent="."]
 transform = Transform3D(2.50788, 0, 0, 0, 2.55572, 0, 0, 0, 4.13588, 73.7433, 0.995932, -3.36374)
-size = Vector3(2.12136, 2, 1.87934)
+size = Vector3(5, 4, 1.87934)
 material = SubResource("FogMaterial_n0oxq")
 
 [node name="Lights" type="Node" parent="."]

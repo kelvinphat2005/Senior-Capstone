@@ -58,12 +58,11 @@ func update_animation():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	# print(self.position)
-	
 	var direction = Vector3.ZERO
 	
-	if PlayerVariables.hud:
-		hud = PlayerVariables.hud
+	PlayerVariables.hud = $HUD
+	
+	#print(PlayerVariables.inventory)
 	
 	if Input.is_action_pressed("move_right"):
 		direction.x += 1
@@ -137,13 +136,13 @@ func instance_hud():
 	PlayerVariables.hud = temp_hud
 
 func hide_hud():
-	hud.visible = false
-	for child in hud.get_node("Health").get_children():
+	PlayerVariables.hud.visible = false
+	for child in PlayerVariables.hud.get_node("Health").get_children():
 		child.visible = false
 	
 func show_hud():
-	hud.visible = true
-	for child in hud.get_node("Health").get_children():
+	PlayerVariables.hud.visible = true
+	for child in PlayerVariables.hud.get_node("Health").get_children():
 		child.visible = true
 
 func get_quests():

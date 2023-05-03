@@ -6,15 +6,19 @@ var current_quests = []
 # Called when the node enters the scene tree for the first time.
 func _process(delta):
 	for event in get_children():
-		if event.active:
-			
+		if event.active:	
 			if has_required_item(event):
 				if event.triggered == false:
 					trigger(event)
 					
 
 func has_required_item(event):
-	var inventory = player.get_node("Inventory").inventory
+	var inventory = PlayerVariables.inventory
+	
+	if len(inventory) > 0:
+		if inventory[0] == null:
+			return true
+		
 	for item in inventory:
 		if item.id == event.required_item:
 			return true
