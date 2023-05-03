@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://duqbgpl5dfdrh"]
+
+[ext_resource type="PackedScene" uid="uid://ck6480p1x55sj" path="res://levels/reception/reception.glb" id="1_j20cc"]
+[ext_resource type="PackedScene" uid="uid://dsymegh3car3p" path="res://assets/objects/door/door.tscn" id="2_vuykf"]
+
+[node name="reception" instance=ExtResource("1_j20cc")]
+
+[node name="door" parent="." index="27" instance=ExtResource("2_vuykf")]
+transform = Transform3D(-9.07885e-08, 0, -1.35, 0, 1.35, 0, 2.077, 0, -5.90104e-08, 6.93441, 4.76837e-07, -1.57198)

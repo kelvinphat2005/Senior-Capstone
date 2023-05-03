@@ -9,5 +9,6 @@ func _ready():
 	repeatable = true
 
 func result_function():
-	get_tree().change_scene_to_file("res://levels/apartment hallway/apartment hallway playable.tscn")
+	PlayerVariables.level_spawn = 1
+	get_tree().change_scene_to_file("res://levels/starting level/starting_level.tscn")
 

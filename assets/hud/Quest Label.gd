@@ -9,12 +9,17 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	
 	var current_quests = PlayerVariables.current_quests
 	
-	if get_node("res://player/Player.tscn"):
+	if not is_instance_valid(PlayerVariables.current_quests):
+		return
+	
+	
+	if self.is_inside_tree:
+		print("yippee")
 		if current_quests:
 			if len(current_quests) > 0:
 				text = "{name} - {description}".format({"name": current_quests[0].quest_name, "description": current_quests[0].quest_description})
 			else:
 				text = "No Quests"
-

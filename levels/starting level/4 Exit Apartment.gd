@@ -10,5 +10,6 @@ func _ready():
 
 func result_function():
 	PlayerVariables.level_spawn = 2
+
 	get_tree().change_scene_to_file("res://levels/apartment hallway/apartment hallway playable.tscn")
 

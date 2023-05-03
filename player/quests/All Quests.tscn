@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://b7u6ceyyjndge"]
+[gd_scene load_steps=5 format=3 uid="uid://b7u6ceyyjndge"]
 
 [ext_resource type="Script" path="res://player/quests/1 Retrieve Cup.gd" id="1_1uyra"]
 [ext_resource type="Script" path="res://player/quests/2 Fill Cup.gd" id="2_ipjuc"]
+[ext_resource type="Script" path="res://player/quests/3 Explore.gd" id="3_j60fk"]
+[ext_resource type="Script" path="res://player/quests/4 Visit Apartment.gd" id="4_dm7ob"]
 
 [node name="All Quests" type="Node"]
 
@@ -10,3 +12,9 @@ script = ExtResource("1_1uyra")
 
 [node name="2 Fill Cup" type="Node" parent="."]
 script = ExtResource("2_ipjuc")
+
+[node name="3 Explore" type="Node" parent="."]
+script = ExtResource("3_j60fk")
+
+[node name="4 Visit Apartment" type="Node" parent="."]
+script = ExtResource("4_dm7ob")

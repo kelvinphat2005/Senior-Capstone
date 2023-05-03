@@ -9,9 +9,10 @@ func _ready():
 	all_quests = get_node("All Quests").get_children()
 	
 func _process(delta):
-	PlayerVariables.quest_handler = self
-	PlayerVariables.all_quests = all_quests
-	PlayerVariables.current_quests = current_quests
+	#PlayerVariables.quest_handler = self
+	#PlayerVariables.all_quests = all_quests
+	#PlayerVariables.current_quests = current_quests
+	pass
 
 func get_quest(ID: int):
 	for quest in all_quests:
