@@ -24,11 +24,11 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	player = get_parent().get_parent()
 	inventory = PlayerVariables.inventory
 	# print("h", inventory)
 	
 	var equipped_item = PlayerVariables.equipped_item
+	print(equipped_item)
 	
 	if equipped_item == null:
 		set_texture(all_item_logos["fist"])

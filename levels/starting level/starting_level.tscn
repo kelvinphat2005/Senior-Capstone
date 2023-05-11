@@ -88,9 +88,11 @@ script = ExtResource("2_1poi5")
 
 [node name="001 bandage" parent="Items" instance=ExtResource("18_1ugfa")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+entity_id = 1
 
 [node name="cup" parent="Items" instance=ExtResource("9_mq4ct")]
 transform = Transform3D(0.0487113, 0, -0.0873339, 0, 0.1, 0, 0.0873339, 0, 0.0487113, -4.312, 1.83332, 0.0822727)
+entity_id = 2
 
 [node name="Greenery" type="Node" parent="."]
 

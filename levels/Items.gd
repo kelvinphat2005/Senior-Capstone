@@ -18,6 +18,9 @@ func _ready():
 func _process(delta):
 	var children = get_children()
 	for item in children:
+		if item.entity_id in PlayerVariables.collected_items:
+			item.visible = false
+		
 		# item must have its collision_mask at 2 (player) for this to work
 		if item.visible:
 			if item.has_overlapping_bodies(): # if player enters the collision shape of item
@@ -25,6 +28,8 @@ func _process(delta):
 					print("Item interacted with")
 					item.visible = false
 					inventory.add_item(item)
+					PlayerVariables.collected_items.append(item.entity_id)
+			
 				
 	
 	

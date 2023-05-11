@@ -31,7 +31,7 @@ func equip_item(item):
 	PlayerVariables.equipped_item = item
 	
 func get_equipped():
-	return equipped_item
+	return PlayerVariables.equipped_item
 
 func test():
 	print("TEST")
