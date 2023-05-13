@@ -1,6 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://bmmng2cgowlxu"]
+[gd_scene load_steps=15 format=3 uid="uid://bmmng2cgowlxu"]
 
 [ext_resource type="PackedScene" uid="uid://duqbgpl5dfdrh" path="res://levels/reception/reception.tscn" id="1_7j5mp"]
+[ext_resource type="Script" path="res://levels/reception/reception_playable.gd" id="1_fu55f"]
 [ext_resource type="PackedScene" uid="uid://dqdyalu51xagc" path="res://player/Player.tscn" id="2_4gln4"]
 [ext_resource type="Script" path="res://levels/starting level/2 Fill Cup.gd" id="3_5h1xe"]
 [ext_resource type="PackedScene" uid="uid://cyc0qe562iuu7" path="res://player/Player Camera.tscn" id="3_b4goe"]
@@ -37,7 +38,12 @@ volumetric_fog_ambient_inject = 0.53
 [sub_resource type="BoxShape3D" id="BoxShape3D_4kk2n"]
 size = Vector3(3.82765, 9.18463, 1)
 
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_2e57e"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_cthwc"]
+
 [node name="reception playable" type="Node"]
+script = ExtResource("1_fu55f")
 
 [node name="Events" type="Node" parent="."]
 script = ExtResource("4_ch0n8")
@@ -89,3 +95,14 @@ light_energy = 0.5
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Stair Collision"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.75929, 0, -9.86965)
 shape = SubResource("BoxShape3D_4kk2n")
+
+[node name="Receptionist" type="RigidBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Receptionist"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.0737, 0.88741, -7.06013)
+shape = SubResource("CapsuleShape3D_2e57e")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Receptionist"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.0737, 0.88741, -7.06013)
+mesh = SubResource("CapsuleMesh_cthwc")
+skeleton = NodePath("")
