@@ -6,3 +6,4 @@ extends Node
 func _ready():
 	var quest_handler = player.get_node("Quest Handler")
 	quest_handler.add_quest(3)
+

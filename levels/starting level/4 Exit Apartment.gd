@@ -8,8 +8,11 @@ func _ready():
 	result = [RESULT.FUNCTION]
 	repeatable = true
 
+@onready var time = Time.get_ticks_msec()
 func result_function():
 	PlayerVariables.level_spawn = 2
-
-	get_tree().change_scene_to_file("res://levels/apartment hallway/apartment hallway playable.tscn")
+	
+	print(Time.get_ticks_msec() - time)
+	if Time.get_ticks_msec() - time > 1000:
+		get_tree().change_scene_to_file("res://levels/apartment hallway/apartment hallway playable.tscn")
 
