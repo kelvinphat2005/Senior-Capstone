@@ -22,15 +22,19 @@ func _process(delta):
 		
 func load_slots():
 	if finished_loading_slots == false:
-		var inventory = PlayerVariables.inventory
-		for i in inventory:
-			var item_slot = load("res://assets/hud/inventory_slot.tscn")
-			add_child(item_slot.instantiate())
-		var current_slot = 0
-		for child in get_children():
-			child.item = inventory[current_slot]
-			child.text = child.item.item_name
-			current_slot += 1
+		if PlayerVariables.player_ready:
+			
+			
+			var inventory = PlayerVariables.inventory
+			for i in inventory:
+				var item_slot = load("res://assets/hud/inventory_slot.tscn")
+				add_child(item_slot.instantiate())
+				
+			var current_slot = 0
+			for child in get_children():
+				child.item = inventory[current_slot]
+				child.text = child.item.item_name
+				current_slot += 1
 
 func select_item(item):
 	var inventory = PlayerVariables.inventory

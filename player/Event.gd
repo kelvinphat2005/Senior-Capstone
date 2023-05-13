@@ -40,16 +40,18 @@ func do_result():
 	for i in result:
 		var player = get_parent().get_parent().get_node("Player")
 		var quest_handler = player.get_node("Quest Handler")
+		# var quest_handler = PlayerVariables.quest_handler
 		if i == RESULT.QUEST_ADD:
 			for quest_id in result_quest:
-				print("QUEST ID ", quest_id)
+				print("RESULT.QUEST_ADD: QUEST ID ", quest_id)
 				quest_handler.add_quest(quest_id)
 				
 		elif i == RESULT.QUEST_REMOVE:
-			print("RQUEST ID ", remove_quest)
+			print("RESULT.QUEST_REMOVE: QUEST ID ", remove_quest)
 			quest_handler.remove_quest(remove_quest)
 			
 		if i == RESULT.QUEST_COMPLETE:
+			print("RESULT.QUEST_COMPLETE: QUEST ID ", completed_quest)
 			quest_handler.complete_quest(completed_quest)
 			
 		elif i == RESULT.FUNCTION:

@@ -28,7 +28,7 @@ func _process(delta):
 	# print("h", inventory)
 	
 	var equipped_item = PlayerVariables.equipped_item
-	print(equipped_item)
+	# print(equipped_item)
 	
 	if equipped_item == null:
 		set_texture(all_item_logos["fist"])

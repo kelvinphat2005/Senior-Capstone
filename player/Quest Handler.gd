@@ -20,7 +20,7 @@ func get_quest(ID: int):
 			return quest
 
 func add_quest(ID):
-	print("QUEST ADDED")
+	print("QUEST ADDED ", ID)
 	current_quests.append(get_quest(ID))
 
 func get_quest_index(ID):
@@ -31,7 +31,7 @@ func get_quest_index(ID):
 		index += 1
 
 func remove_quest(ID):
-	print("QUEST REMOVED")
+	print("QUEST REMOVED ", ID)
 	var index = get_quest_index(ID)
 	current_quests.pop_at(index)
 

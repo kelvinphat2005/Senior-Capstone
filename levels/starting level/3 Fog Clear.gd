@@ -7,7 +7,9 @@ func _ready():
 	result = [RESULT.FUNCTION]
 	trigger = TRIGGER.MANUAL
 
-func result_function():
+func do_result():
 	var env = $"../../WorldEnvironment".environment
 	env.volumetric_fog_density = 0.03
-	print("FSDKJMHFSDKJHSDFLKJFLSKDFSD")
+	
+	get_parent().get_parent().get_node("Greenery").clear_greenery()
+	print("Event 3 Fog Clear 'do_result' ran successfully")

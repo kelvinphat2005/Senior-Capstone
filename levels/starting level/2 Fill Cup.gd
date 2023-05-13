@@ -5,6 +5,6 @@ func _ready():
 	event_id = 2
 	active = false
 	result_quest = [3]
-	completed_quest = null
+	completed_quest = 2
 	trigger = TRIGGER.INTERACT
-	result = [RESULT.QUEST_ADD]
+	result = [RESULT.QUEST_COMPLETE, RESULT.QUEST_ADD]

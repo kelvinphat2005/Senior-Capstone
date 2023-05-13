@@ -14,9 +14,11 @@ var hud
 
 var collected_items = []
 
+var player_ready = false
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	player_ready = true
 
 func _process(delta):
 	pass
