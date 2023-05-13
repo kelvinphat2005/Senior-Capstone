@@ -26,6 +26,7 @@ func add_quest(ID):
 func get_quest_index(ID):
 	var index = 0
 	for quest in current_quests:
+		print("Index: ", index)
 		if quest.quest_id == ID:
 			return index
 		index += 1
@@ -33,7 +34,7 @@ func get_quest_index(ID):
 func remove_quest(ID):
 	print("QUEST REMOVED ", ID)
 	var index = get_quest_index(ID)
-	current_quests.pop_at(index)
+	# current_quests.pop_at(index)
 
 func complete_quest(ID):
 	remove_quest(ID)

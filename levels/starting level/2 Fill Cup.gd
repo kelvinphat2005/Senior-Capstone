@@ -4,7 +4,7 @@ extends Event
 func _ready():
 	event_id = 7
 	active = true
-	result_quest = [4]
+	result_quest = [null]
 	completed_quest = 3
 	trigger = TRIGGER.INTERACT
-	result = [RESULT.QUEST_COMPLETE, RESULT.QUEST_ADD]
+	result = [RESULT.QUEST_COMPLETE]
